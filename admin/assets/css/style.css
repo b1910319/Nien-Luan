@@ -1,0 +1,50 @@
+*{
+    font-size: 18px;
+}
+/* ---------------------------trang thêm danh mục sản phẩm, trang danh sách danh mục
+, trang sửa danh mục  */
+.them-danh-muc h1, .danh-sach-danh-muc h1, .sua-danh-muc h1, 
+.them-xuat-xu h1, .them-bo-suu-tap h1, .danh-sach-bo-suu-tap h1,
+.danh-sach-phong h1, .sua-phong h1, .ho-so-admin h1, .hinh-anh-san-pham h1,
+.danh-sach-san-pham h1, .hinh-anh-san-pham h1,  .danh-sach-hinh-anh h1,
+.sua-san-pham h1, .sua-hinh-anh-san-pham h1, .them-tinh h1, 
+.thong-ke-theo-ngay h1 .them-san-pham h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #eb3007;
+}
+.duong-dan ol li a{
+    font-weight: bold;
+    color: gray;
+}
+.duong-dan ol li:hover a{
+    color: #038018;
+}
+.them-danh-muc-body table, .danh-sach-danh-muc table{
+    color: black;
+}
+/*  */
+/*----------------------------------------------------- trang đơn hàng mới  */
+.don-hang-moi > a{
+    font-weight: bold;
+}
+
+/*  */
+
+tr:hover td{
+    color: #ee3500;
+}
+/*------------------------------------------------------------ trang thống kê */
+
+.title{
+    font-weight: bold;
+    /* text-align: center; */
+    /* font-size: 50px; */
+    color: #2c2c2c;
+    /* background-color: #d5d5d5; */
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    height: 100px;
+    /* padding-top: 40px; */
+}
+/*  */

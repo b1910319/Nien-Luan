@@ -1,0 +1,846 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style: none;
+}
+/*--------------------------------------------------- header  */
+
+.header img{
+    width: 100%;
+}
+/*  */
+
+/*--------------------------------------------------- nút đăng ký đăng nhập giỏ hàng  */
+.chucnang , .hienchao{
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+.chucnang {
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    background-color: #eb3007;
+    margin-top: 20px;
+}
+.chucnang:hover{
+    background-color: white;
+
+}
+.chucnang:hover {
+    color: black;
+    font-weight: bold;
+}
+.menu1{
+    margin: 5px 0px;
+}
+
+/*  */
+
+/*------------------------------------------------------------ thanh menu  */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu2{
+    position: absolute;
+    width: 98%;
+    height: 55px;
+    background-color: #192433;
+    margin: 0px 0px 0px 2px;
+}
+.menu-icon{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1500;
+    display: none;
+}
+.nav {
+    width: 100%;
+    /* height: 8rem; */
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.nav-list  li{
+    /* line-height: 8rem; */
+    position: relative;
+}
+.sub-menu li{
+    /* line-height: 3rem; */
+    line-height: 2rem;
+}
+.nav-list a{
+    display: block;
+    color: white;
+    padding: 0 1rem;
+    font-size: 1rem;
+    transition: color 650ms;
+    font-weight: bold;
+}
+.nav-list a:hover{
+    color: #eb3007;
+}
+.sub-menu{
+    width: 20rem;
+    display: block;
+    position: absolute;
+    border-top: 3px solid #eb3007;
+    background-color: #192433;
+    z-index: 100;
+    top: 10rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 650ms ease;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+.sub-menu::before{
+    content: '';
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    border: 1rem solid transparent;
+    border-bottom-color: #eb3007;
+}
+.sub-menu  .sub-menu::before{
+    top: .9rem;
+    left: -3rem;
+    border: 1.2rem solid transparent;
+    border-right-color: #eb3007;
+}
+.sub-menu .sub-menu{
+    border-top: none;
+    border-left: 3px solid #eb3007;
+    top: 0;
+    left: 150%;
+}
+
+.nav-list li:hover > .sub-menu{
+    top: 2.9rem;
+    opacity: 1;
+    visibility: visible;
+
+}
+.sub-menu li:hover > .sub-menu{
+    top: 0;
+    left: 100%;
+
+}
+@media  screen and (max-width : 900px) {
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: auto;
+        display: none; 
+        flex-direction: column;
+        background-color: #192433;
+        align-items: initial;
+        z-index: 1000;
+
+    }
+
+    .sub-menu{
+        position: initial;
+        border: 3px solid transparent;
+        border-left-color: #eb3007;
+        margin-left: 0.2rem;
+        max-height: 0;
+    }
+    .sub-menu::before{
+        display: none;
+    }
+    .nav-list li:hover > .sub-menu{
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+    .menu-icon{
+        display: block;
+    }
+}
+
+
+/*  */
+
+/* ----------------------------------------------------------------banner  */
+
+.hinh-slide{
+    overflow:hidden;
+    width: 100%;
+}
+.banner-right{
+    display: inline;
+}
+.hinh-slide-right{
+    width: 96%;
+    margin-left: 10px;
+}
+
+/*  */
+
+/*-------------------------------------------------------------- sản phẩm */
+.sanpham{
+    padding-top: 20px;
+}
+.sanpham-chitiet{
+    /* margin-right: 46px; */
+    position: relative;
+    margin-bottom: 10px;
+}
+.card{
+    border-radius: 10px;
+    border: none;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px;
+    /* background-color: #f8f1d0 ; */
+}
+.cart-heart i {
+    color: #eb3007;
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.cart-img{
+    object-fit: cover;
+    width: 100%;
+    transition: 0.5s ease;
+    /* border-bottom: 2px solid gray; */
+}
+.card-title {
+    text-align: center;
+    font-weight: bold;
+    color: #038018;
+    transition: 0.5s ease;
+    margin-top: -10%;
+    text-transform: capitalize;
+}
+.card:hover .card-title{
+    color: #eb3007;
+}
+.muangay {
+    background-color: #eb3007;
+    color: white;
+    font-weight: bold;
+}
+
+.xemchitiet{
+    background-color: #038018;
+    color: white;
+    font-weight: bold;
+}
+.card{
+    transition: 0.5s ease;
+}
+.card:hover .cart-img{
+    transform: translateY(-20px);
+}
+.card-bst{
+    color: #8aa08b;
+    font-weight: bold;
+}
+.card:hover {
+    transform: translateY(-20px);
+}
+.cart-action{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover .cart-action{
+    visibility: visible;
+    opacity: 1;
+
+}
+.card-price{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card-price i {
+    color: #eb3007;
+}
+/*  */
+
+/* ---------------------------------------------------------------top bán chạy  */
+.top-ban-chay{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.top-ban-chay p{
+    background-color: #eb3007;
+    font-weight: bold;
+    border: 1px solid #eb3007;
+}
+.top-ban-chay p:hover{
+    background-color: white;
+    color: #eb3007;
+    font-weight: bold;
+    border: 1px solid #eb3007;
+}
+/*  */
+/*--------------------------------------------------------------- chính sách  */
+.chinh-sach{
+    background-color: #ff944d;
+}
+.van-chuyen, .lap-dat, .bao-hanh{
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+}
+.van-chuyen p, .lap-dat p, .bao-hanh p{
+    margin-top: 10px;
+    color: #038018;
+    font-weight: bold;
+}
+
+/*  */
+
+ /* --------------------------------------------------------------footer  */
+footer{
+    background-color: #192433;
+}
+.baya , .ho-tro-khach, .lien-he {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.baya-title, .lien-he-title, .ho-tro-khach-title{
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+    padding-bottom: 8px;
+
+    font-size: 18px;
+    margin-top: 20px;
+}
+.baya-title:hover, .lien-he-title:hover, .ho-tro-khach-title:hover{
+    color: #038018;
+}
+.baya-body a, .lien-he-body a, .ho-tro-khach-body a{
+    color: white;
+    line-height: 2rem;
+}
+.baya-body a:hover, .lien-he-body a:hover, .ho-tro-khach-body a:hover{
+    color: #eb3007;
+    font-weight: bold;
+}
+.fa-facebook{
+    font-size: 35px;
+    color: blue;
+}
+.fa-facebook:hover{
+    color: white;
+}
+ /*  */
+/* ----------------------------------------------------------trang chi tiết sản phẩm  */
+.breadcrumb li {
+    font-weight: bold;
+    font-size: 18px;
+}
+.duongdan-item a{
+    color: #757575;
+}
+.duongdan-item a:hover{
+    color: #038018;
+}
+.chitiet-hinh{
+    border-right: 2px solid #abacad;
+}
+.chitiet-title {
+    border-bottom:2px solid #abacad ;
+}
+.chitiet-title:hover h1{
+    color: #eb3007;
+}
+.masp, .tongsoluongsp{
+    color: #8aa08b;
+    font-weight: bold;
+}
+.chitiet-title h1{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.chitiet-title:hover .giasp{
+    color: black;
+}
+
+.chitiet-muangay button{
+    /* margin-top: 20px; */
+    background-color: #eb3007;
+    border: 1px solid #eb3007;
+    color: white;
+    font-weight: bold;
+}
+.chitiet-muangay button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #eb3007;
+}
+.chinhsach-muahang{
+    margin-top: 20px;
+}
+.chinhsach-title{
+    color: black;
+    font-weight: bold;
+}
+.tomtat-sanpham ul{
+    color: black;
+    font-size: 18px;
+
+}
+
+
+/*------------------------------------------ phần mô tả sản phẩm của trang chi tiết sản phẩm  */
+.mota-sanpham a{
+    background-color: #038018;
+    color: white;
+    font-weight: bold;
+}
+.mota-sanpham a:hover{
+    color: black;
+    background-color: white;
+}
+.quy-cach p span{
+    font-weight: bold;
+}
+/*  */
+/* ----------------------------------------------------phần số lượng sản phẩm trong trang chi tiết sản phẩm  */
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    h2 small {
+        font-weight: normal;
+        color: #888;
+        display: block;
+    }
+    .group {
+        position: relative;
+        margin-bottom: 45px;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 0px 10px 10px 5px;
+        display: block;
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #757575;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    label {
+        color: #999;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    /* active state */
+    input:focus~label,
+    input:valid~label {
+        top: -20px;
+        font-size: 14px;
+        color: #5264AE;
+    }
+
+    .bar {
+        position: relative;
+        display: block;
+        width: 300px;
+    }
+
+    .bar:before,
+    .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #5264AE;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+    /* active state */
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 50%;
+    }
+
+
+    .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    /* active state */
+    input:focus~.highlight {
+        -webkit-animation: inputHighlighter 0.3s ease;
+        -moz-animation: inputHighlighter 0.3s ease;
+        animation: inputHighlighter 0.3s ease;
+    }
+
+
+    @-webkit-keyframes inputHighlighter {
+        from {
+            background: #5264AE;
+        }
+
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    @-moz-keyframes inputHighlighter {
+        from {
+            background: #5264AE;
+        }
+
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    @keyframes inputHighlighter {
+        from {
+            background: #5264AE;
+        }
+
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+/*  */
+
+/* ------------------------------------------------------------------trang đăng nhập  */
+.get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+.get-in-touch .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    line-height: 48px;
+    padding-bottom: 48px;
+    color: #5543ca;
+    background: #5543ca;
+    background: -moz-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+    background: -webkit-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+    background: linear-gradient(to right,#f4524d  0%,#5543ca  100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent !important;
+}
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text:focus {
+    outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+}
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+    -webkit-transform .2s ease-in-out;
+}
+.contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(125deg,#a72879,#064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:200px;
+    cursor: pointer;
+}
+
+/*  */
+/* ----------------------------------------------------------------trang giỏ hàng  */
+.giohang-title{
+    text-align: center;
+    font-weight: bold;
+}
+.gio-hang-tieptuc-muasam, .giohang-thanhtoan a {
+    color: #eb3007;
+}
+.giohang-thanhtoan:hover a, .gio-hang-tieptuc-muasam:hover{
+    font-size: 18px;
+    color: #038018;
+}
+.table-giohang-title th {
+    font-size: 18px;
+    font-weight: bold;
+
+    
+}
+.table-giohang-body td:last-child i {
+    font-size: 18px;
+    color: #038018;
+}
+.table-giohang-body td:last-child:hover i{
+    color: #eb3007;
+}
+
+/*  */
+
+
+
+
+/* -----------------------------------------------------------trang chính sách bảo hành  */
+.cs-baohanh{
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cs-baohanh-title h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cs-baohanh-body-thoihan h4, .cs-baohanh-body-diadiem h4, .cs-baohanh-body-chinhsach h4{
+    color: #038018;
+    font-weight: bold;
+}
+.cs-baohanh-body-chinhsach p {
+    font-weight: bold;
+    color: #757575;
+    margin-left: 40px;
+}
+.cs-baohanh-body-chinhsach li{
+    margin-left: 60px;
+}
+.cs-baohanh-body-chinhsach h6{
+    font-weight: bold;
+    color: #eb3007;
+    margin-left: 20px;
+}
+.cs-baohanh-body-thoihan p, .cs-baohanh-body-diadiem p{
+    margin-left: 20px;
+}
+
+/*  */
+/* -------------------------------------------------------------------------trang chính sách bảo mật thông tin  */
+.cs-baomat{
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cs-baomat-title h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cs-baomat-body p{
+    font-weight: bold;
+    color: #038018;
+}
+.cs-baomat-body li{
+    margin-left: 20px;
+}
+
+/*  */
+
+/*--------------------------------------------------- trang chính sách đổi trả sản phẩm  */
+.cs-doitra{
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cs-doitra h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cs-doitra-body p{
+    font-weight: bold;
+    color: #038018;
+}
+.cs-doitra-body li{
+    margin-left: 20px;
+}
+/*  */
+
+/* -----------------------------------------------------------trang chính sách dành cho cộng tác viên  */
+.cs-contacvien {
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cs-contacvien h1, .cs-congtacvien-body-quytrinh-title h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cs-congtacvien-body-thuong p, .cs-congtacvien-body-thunhap p{
+    font-weight: bold;
+    color: #038018;
+}
+.cs-congtacvien-body-thunhap li, .cs-congtacvien-body-thuong li{
+    font-weight: bold;
+    color: #eb3007;
+}
+/*  */
+/*----------------------------------------------------------------------------- trang câu hỏi thường gặp  */
+.cauhoi{
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cauhoi-title h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cauhoi-body p{
+    font-weight: bold;
+    color: #038018;
+}
+.cauhoi-body li{
+    margin-left: 20px;
+}
+.cauhoi-body h4{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/*  */
+/* -----------------------------------------------------------------------------trang giới thiệu  */
+.gioithieu {
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.gioithieu-title h1{
+    text-align: center;
+    font-weight: bold;
+}
+.gioithieu-body-visaonenchon h4, .gioithieu-body-cauchuyenthuonghieu h4{
+    color: #eb3007;
+    font-weight: bold;
+}
+.gioithieu-body-visaonenchon p, .gioithieu-body-cauchuyenthuonghieu p{
+    margin-left: 20px;
+}
+.gioithieu-body-visaonenchon li, .gioithieu-body-cauchuyenthuonghieu li {
+    margin-left: 40px;
+}
+/*  */
+
+/* -----------------------------------------------------------------------------trang sửa thông tin khách hàng  */
+.boder-none{
+    border: none !important;
+}
+.next-info{
+    font-size: 25px ;
+    color: #038018;
+}
+/*  */
+/* ----------------------------------------------------------------------trang thanh toán khi nhận hàng  */
+.hoantat{
+    background-color: #eb3007;
+    color: white;
+    font-weight: bold;
+    padding-top: 7px;
+}
+.hoantat:hover{
+    background-color: white;
+    border: 1px solid #eb3007;
+    color: #eb3007;
+}
+/*  */
+/*------------------------------------------------------------------------ trang mua hàng trả góp  */
+.cs-muatragop{
+    border: 2px solid #abacad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.cs-muatragop h1{
+    text-align: center;
+    font-weight: bold;
+}
+.cs-muatragop-body li{
+    margin-left:40px ;
+}
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+

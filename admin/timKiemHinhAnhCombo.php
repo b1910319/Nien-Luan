@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <?php include_once("include/header.php") ?>
+    <?php include_once ("include/rightBar.php") ?>
+    <?php include_once ("../class/hinhAnhCombo.php") ?>
+    <?php include_once("../class/combo.php") ?>
+    <?php 
+        $hinhAnhCombo = new hinhAnhCombo();
+        if (isset($_GET['timkiem_hinhanh_combo']) ){
+            $timkiem_hinhanh_combo = $_GET['timkiem_hinhanh_combo'];
+            $timkiem_hinhanh_combo_ds = $hinhAnhCombo->timkiem_hinhanh_combo($timkiem_hinhanh_combo);
+        }
+    ?>
+    <div class="container danh-sach-hinh-anh" style="margin-top: 100px;">
+        <div >
+            <h1 class="title">KẾT QUẢ TÌM KIẾM THEO "<?php echo $timkiem_hinhanh_combo ?>"</h1>
+        </div>
+        <nav class="duong-dan" aria-label="breadcrumb">
+            <ol class="breadcrumb row">
+                <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
+                <li class="breadcrumb-item col-6 " aria-current="page">
+                    <a href="timKiemHinhAnhCombo.php">Tìm kiếm hình ảnh combo</a>
+                </li>
+                <div class="col-4">
+                    <form class="d-flex" action="timKiemHinhAnhCombo.php" method="get">
+                        <input name="timkiem_hinhanh_combo" class="form-control " type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </ol>
+        </nav>
+        <div class="danh-sach-hinh-anh-body">
+            <div class="container table-responsive ">
+                <table class="table table-bordered table-hover" style="color: black;">
+                    <?php
+                        if ($timkiem_hinhanh_combo_ds){
+                            ?>
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">STT</th>
+                                        <th scope="col">Tên combo</th>
+                                        <th scope="col">Hình ảnh</th>
+                                        <th scope="col">Quản lý</th>
+                                    </tr>
+                                </thead>
+                            <?php
+                        }
+                        else{
+                            ?>
+                                <h5 style="color: #eb3007; font-weight: bold;">Hình ảnh của sản phẩm được tìm hiện không tồn tại</h5>
+                            <?php
+                        }
+                    ?>
+                    <tbody>
+                        <?php
+                            if ($timkiem_hinhanh_combo_ds){
+                                $i=0;
+                                while ($result = $timkiem_hinhanh_combo_ds->fetch_assoc()){
+                                    $combo = new combo();
+                                    $ten_combo = $combo->layCombo($result['ma_combo']);
+                                    if($ten_combo){
+                                        $resultC=$ten_combo->fetch_assoc();
+                                    }
+                                    $i++;
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?php echo $i ?></th>
+                                            <td><?php echo $resultC['ten_combo'] ?></td>
+                                            <td><img src="uploads/<?php echo $result['hinhanh_combo'] ?>" width="100px"></td>
+                                            <td>
+                                                <a href="suaHinhAnhCombo.php?ma=<?php echo $result['ma_hinhanh_combo'] ?>"><i class="fas fa-user-edit"></i></a> 
+                                                || 
+                                                <a onclick="return confirm('Bạn có muốn xóa hình ảnh của <?php echo $resultC['ten_combo'] ?> không?')" href="danhSachHinhAnhCombo.php?maXoa=<?php echo $result['ma_hinhanh_combo'] ?>">
+                                                    <i class="fas fa-user-minus"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                }
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</html>
