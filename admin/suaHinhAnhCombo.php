@@ -23,14 +23,9 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-hinh-anh-san-pham" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA HÌNH ẢNH COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA HÌNH ẢNH COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaHinhAnhCombo.php">Sửa hình ảnh combo</a></li>
-            </ol>
-        </nav>
+        
         <div class="sua-hinh-anh-san-pham-body">
             <?php 
                 $hinhAnhCombo = new hinhAnhCombo();
@@ -58,7 +53,7 @@
                                             <th scope="row">Tên combo: </th>
                                             <td>
                                                 <select class="custom-select" id="gender2" name="ten_combo">
-                                                    <option selected>Choose...</option>
+                                                    <option selected>Chọn combo</option>
                                                     <?php
                                                         $combo = new combo();
                                                         $layten_combo = $combo->show_combo();
@@ -80,7 +75,10 @@
                                         <tr>
                                             <th></th>
                                             <td>
-                                                <button type="submit" class="btn btn-outline-danger" name="suahinhanh_combo">Sửa</button>
+                                                <button type="submit" class="btn btn-outline-danger font-weight-bold" name="suahinhanh_combo">
+                                                    <i class="fas fa-pen"></i>
+                                                    Sửa
+                                                </button>
                                             </td>
                                         </tr>
                                     </tbody>

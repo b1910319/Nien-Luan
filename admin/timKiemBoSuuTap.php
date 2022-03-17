@@ -19,15 +19,19 @@
     ?>
     <div class="container danh-sach-bo-suu-tap" style="margin-top: 100px;">
         <div >
-            <h1 class="title">KẾT QUẢ TÌM KIẾM THEO "<?php echo $timkiem_bosuutap ?>"</h1>
+            <h1 class="alert alert-secondary" role="alert" >KẾT QUẢ TÌM KIẾM THEO "<?php echo $timkiem_bosuutap ?>"</h1>
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="timKiemBoSuuTap.php">Tim kiếm bộ sưu tập</a>
-                </li>
-                <div class="col-4">
+                <div class="col">
+                    <a href="danhSachBoSuuTap.php">
+                        <button type="button" class="btn danhsach" >
+                            <i class="fas fa-outdent"></i> 
+                            Danh sách bộ sưu tập
+                        </button>
+                    </a>
+                </div>
+                <div class="col">
                     <form class="d-flex" action="timKiemBoSuuTap.php" method="get">
                         <input name="timkiem-bosuutap" class="form-control " type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>

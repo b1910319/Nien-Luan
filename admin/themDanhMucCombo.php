@@ -18,14 +18,16 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container them-danh-muc" style="margin-top: 100px;">
         <div class="">
-            <h1 class="title">THÊM DANH MỤC COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >THÊM DANH MỤC COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themDanhMucCombo.php">Thêm danh mục</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachDanhMucCombo.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách danh mục combo
+                </button>
+            </a>
+        </div>
         <div class="them-danh-muc-body">
             <form action="themDanhMucCombo.php" method="POST" enctype="multipart/form-data">
                 <table class="table">
@@ -33,7 +35,7 @@
                         <tr>
                             <th scope="row">Tên danh mục: </th>
                             <td class="was-validated">
-                                <input type='text' class='form-control' required style="width: 50%;" name="ten_danhmuc_combo">
+                                <input type='text' class='form-control' required  name="ten_danhmuc_combo">
                             </td>
                         </tr>
                         <tr>
@@ -45,7 +47,10 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button name="them_combo" type="submit" class="btn btn-outline-danger">Thêm</button>
+                                <button name="them_combo" type="submit" class="btn btn-outline-danger font-weight-bold">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
                     </tbody>

@@ -24,14 +24,8 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-san-pham" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA SẢN PHẨM</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA SẢN PHẨM</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaSanPham.php">Sửa sản phẩm</a></li>
-            </ol>
-        </nav>
         <div class="them-san-pham-body">
             <?php
                 $sanPham = new sanPham();
@@ -236,7 +230,10 @@
                                         <tr>
                                             <th></th>
                                             <td>
-                                                <button type="submit" class="btn btn-outline-danger" name="suasanpham">Sửa</button>
+                                                <button type="submit" class="btn btn-outline-danger font-weight-bold" name="suasanpham">
+                                                    <i class="fas fa-pen"></i>
+                                                    Sửa
+                                                </button>
                                             </td>
                                         </tr>
                                     </tbody>

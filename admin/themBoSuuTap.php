@@ -21,14 +21,16 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container them-bo-suu-tap" style="margin-top: 100px;">
         <div >
-            <h1 class="title">THÊM BỘ SƯU TẬP SẢN PHẨM</h1>
+            <h1 class="alert alert-secondary" role="alert" >THÊM BỘ SƯU TẬP SẢN PHẨM</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themBoSuuTap.php">Thêm bộ sưu tập</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachBoSuuTap.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách bộ sưu tập
+                </button>
+            </a>
+        </div>
         <div class="them-bo-suu-tap-body">
             <form action="themBoSuuTap.php" method="POST">
                 <?php
@@ -41,13 +43,13 @@
                         <tr>
                             <th scope="row">Tên bộ sưu tập: </th>
                             <td class="was-validated">
-                                <input type='text' class='form-control' required style="width: 50%;" name="ten_bosuutap">
+                                <input type='text' class='form-control' required  name="ten_bosuutap">
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Bộ sưu tập cha: </th>
                             <td>
-                                <select class="custom-select" id="gender2" style="width: 50%;" name="bosuutap_cha">
+                                <select class="custom-select" id="gender2"  name="bosuutap_cha">
                                 <option selected>Choose...</option>
                                 <?php
                                         $list_bosuutap = $boSuuTap->show_bosuutap();
@@ -65,7 +67,10 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger">Thêm</button>
+                                <button type="submit" class="btn btn-outline-danger font-weight-bold">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
 

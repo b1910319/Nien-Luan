@@ -27,14 +27,9 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-danh-muc" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA DANH MỤC SẢN PHẨM</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA DANH MỤC SẢN PHẨM</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaDanhMuc.php">Sửa danh mục</a></li>
-            </ol>
-        </nav>
+        
         <div class="them-danh-muc-body">
         <?php
                     if (isset($update_danhmuc)){
@@ -52,13 +47,13 @@
                                             <tr>
                                                 <th scope="row">Tên danh mục: </th>
                                                 <td class="was-validated">
-                                                    <input type='text' class='form-control' required style="width: 50%;" name="ten_danhmuc" value="<?php echo $result['ten_danhmuc'] ?>">
+                                                    <input type='text' class='form-control' required  name="ten_danhmuc" value="<?php echo $result['ten_danhmuc'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Danh mục cha: </th>
                                                 <td>
-                                                    <select class="custom-select" id="gender2" style="width: 50%;" name="danhmuc_cha">
+                                                    <select class="custom-select" id="gender2"  name="danhmuc_cha">
                                                     <option selected>Choose...</option>
                                                     <?php
                                                             $list_danhmuc = $danhMucSanPham->show_danhmuc();
@@ -80,7 +75,10 @@
                                             <tr>
                                                 <th></th>
                                                 <td>
-                                                    <button type="submit" class="btn btn-outline-danger">Sửa</button>
+                                                    <button type="submit" class="btn btn-outline-danger font-weight-bold">
+                                                        <i class="fas fa-pen"></i>
+                                                        Sửa
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </tbody>

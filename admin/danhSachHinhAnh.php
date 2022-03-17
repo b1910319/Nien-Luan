@@ -14,15 +14,23 @@
     ?>
     <div class="container danh-sach-hinh-anh" style="margin-top: 100px;">
         <div >
-            <h1 class="title">DANH SÁCH HÌNH ẢNH</h1>
+            <h1 class="alert alert-secondary" role="alert" >DANH SÁCH HÌNH ẢNH</h1>
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
+                <!-- <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
                 <li class="breadcrumb-item col-6 " aria-current="page">
                     <a href="danhSachHinhAnh.php">Danh sách hình ảnh</a>
-                </li>
-                <div class="col-4">
+                </li> -->
+                <div class="col">
+                    <a href="themHinhAnhSanPham.php">
+                        <button type="button" class="btn themmoi" >
+                            <i class="fas fa-plus-square"></i> 
+                            Thêm mới
+                        </button>
+                    </a>
+                </div>
+                <div class="col">
                     <form class="d-flex" action="timKiemHinhAnh.php" method="get">
                         <input name="timkiem-hinhanh" class="form-control " type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>

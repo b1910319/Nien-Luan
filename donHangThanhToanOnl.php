@@ -240,7 +240,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
                                                 ?>
                                             </div>
                                         </div> -->
-        
                                     </div>
                                     
                                 </div>
@@ -255,7 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
                                                 <form action="thanhToanVNPAY.php" method="POST">
                                                     <input type="hidden" name="tongthanhtoan" value="<?php echo $tongTien ?>">
                                                     <button name="redirect" id="redirect" class="btn btn-outline-warning mt-3" style="width: 100%;">
-                                                        <img src="img/hinhthuc-thanhtoan/vnpay.png" >
+                                                        <img src="img/hinhthuc-thanhtoan/vnpay.c0bd59b-removebg-preview.png" style="width: 30%;" >
                                                     </button>
                                                 </form>
                                             </div>
@@ -264,7 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
                                                 <form action="thanhToanMOMO.php" method="POST">
                                                     <input type="hidden" name="tongthanhtoan" value="<?php echo $tongTien ?>">
                                                     <button name="redirect" id="redirect" class="btn btn-outline-warning mt-3" style="width: 100%;">
-                                                        <img src="img/hinhthuc-thanhtoan/MoMo_Logo-removebg-preview.png" style="width: 4%;" >
+                                                        <img src="img/hinhthuc-thanhtoan/MoMo_Logo-removebg-preview.png" style="width: 7%;" >
                                                     </button>
                                                 </form>
                                             </div>
@@ -290,11 +289,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
                     <?php
                 }
                 ?>
-
-
-
-
-
             </div>
         </div>
 

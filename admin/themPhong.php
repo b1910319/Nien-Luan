@@ -17,14 +17,16 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container them-xuat-xu" style="margin-top: 100px;">
         <div >
-            <h1 class="title">THÊM PHÒNG</h1>
+            <h1 class="alert alert-secondary" role="alert" >THÊM PHÒNG</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themPhong.php">Thêm phòng</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachPhong.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách phòng
+                </button>
+            </a>
+        </div>
         <div class=" them-xuat-xu-body">
             <form action="" method="POST">
                 <?php
@@ -37,16 +39,18 @@
                         <tr>
                             <th scope="row">Tên phòng: </th>
                             <td class="was-validated">
-                                <input type='text' class='form-control' required style="width: 50%;" name="ten_phong">
+                                <input type='text' class='form-control' required  name="ten_phong">
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger">Thêm</button>
+                                <button type="submit" class="btn btn-outline-danger font-weight-bold">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>

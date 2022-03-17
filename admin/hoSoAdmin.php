@@ -10,7 +10,7 @@
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
     <div class="container ho-so-admin" style="margin-top: 100px;">
-        <h1 class="title">HỒ SƠ ADMIN</h1>
+        <h1 class="alert alert-secondary" role="alert" >HỒ SƠ ADMIN</h1>
         <div class="ho-so-admin-body">
             <table class="table table-bordered table-hover" style="color: black;">
                 <thead>

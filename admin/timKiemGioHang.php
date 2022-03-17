@@ -21,14 +21,18 @@
     ?>
     <div class="container danh-sach-phong" style="margin-top: 100px;">
         <div >
-            <h1 class="title">KẾT QUẢ TÌM KIẾM THEO "<?php echo $timkiem_giohang ?>"</h1>
+            <h1 class="alert alert-secondary" role="alert" >KẾT QUẢ TÌM KIẾM THEO "<?php echo $timkiem_giohang ?>"</h1>
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="timKiemGioHang.php">Tìm kiếm giỏ hàng</a>
-                </li>
+                <div class="">
+                    <a href="sanPham-gioHang.php">
+                        <button type="button" class="btn danhsach" >
+                            <i class="fas fa-outdent"></i> 
+                            Giỏ hàng
+                        </button>
+                    </a>
+                </div>
                 <div class="col-4">
                     <form class="d-flex" action="timKiemGioHang.php" method="get">
                         <input name="timkiem-giohang" class="form-control " type="search" placeholder="Search" aria-label="Search">

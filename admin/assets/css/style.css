@@ -11,15 +11,10 @@
 .thong-ke-theo-ngay h1 .them-san-pham h1 {
     font-weight: bold;
     text-align: center;
-    color: #eb3007;
-}
-.duong-dan ol li a{
-    font-weight: bold;
-    color: gray;
-}
-.duong-dan ol li:hover a{
+    /* color: #eb3007; */
     color: #038018;
 }
+
 .them-danh-muc-body table, .danh-sach-danh-muc table{
     color: black;
 }
@@ -34,17 +29,22 @@
 tr:hover td{
     color: #ee3500;
 }
-/*------------------------------------------------------------ trang thống kê */
 
-.title{
-    font-weight: bold;
-    /* text-align: center; */
-    /* font-size: 50px; */
-    color: #2c2c2c;
-    /* background-color: #d5d5d5; */
-    letter-spacing: .05em;
-    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-    height: 100px;
-    /* padding-top: 40px; */
+.themmoi{
+    font-weight: bold; 
+    border: 1px solid #038018;
+    color: #038018;
 }
-/*  */
+.themmoi:hover{
+    color: white;
+    background-color: #038018;
+}
+.danhsach{
+    font-weight: bold; 
+    border: 1px solid #cd9d14;
+    color: #cd9d14;
+}
+.danhsach:hover{
+    color: white;
+    background-color: #cd9d14;
+}

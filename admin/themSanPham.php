@@ -22,14 +22,16 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container them-san-pham" style="margin-top: 100px;">
         <div >
-            <h1 class="title" style=" font-weight: bold; text-align: center; color: #eb3007;">THÊM SẢN PHẨM</h1>
+            <h1 class="alert alert-secondary" role="alert" style=" font-weight: bold; text-align: center; color: #038018;">THÊM SẢN PHẨM</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themSanPham.php">Thêm sản phẩm</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachSanPham.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách sản phẩm
+                </button>
+            </a>
+        </div>
         <div class="them-san-pham-body">
             <form action="" method="POST">
                 <table class="table" style="color: black;">
@@ -191,10 +193,12 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger" name="themsanpham">Thêm</button>
+                                <button type="submit" class="btn btn-outline-danger font-weight-bold" name="themsanpham">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>

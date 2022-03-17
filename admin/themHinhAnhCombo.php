@@ -21,14 +21,16 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container hinh-anh-san-pham" style="margin-top: 100px;">
         <div >
-            <h1 class="title">HÌNH ẢNH CỦA COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >HÌNH ẢNH CỦA COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themHinhAnhCombo.php">Hình ảnh của combo</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachHinhAnhCombo.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách hình ảnh combo
+                </button>
+            </a>
+        </div>
         <div class="hinh-anh-san-pham-body">
             <form action="" method="POST" enctype="multipart/form-data">
                 <table class="table">
@@ -43,7 +45,7 @@
                             <th scope="row">Tên combo: </th>
                             <td>
                                 <select class="custom-select" id="gender2" name="ten_combo">
-                                    <option selected>Choose...</option>
+                                    <option selected>Chọn combo</option>
                                     <?php
                                         $combo = new combo();
                                         $layCombo = $combo->show_combo();
@@ -61,7 +63,10 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger" name="them_hinhanh_combo">Thêm</button>
+                                <button type="submit" class="btn btn-outline-danger font-weight-bold" name="them_hinhanh_combo">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
                     </tbody>

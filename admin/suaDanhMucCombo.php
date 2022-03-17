@@ -18,14 +18,8 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-danh-muc" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA DANH MỤC COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA DANH MỤC COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaDanhMucCombo.php">Sửa danh mục</a></li>
-            </ol>
-        </nav>
         <div class="them-danh-muc-body">
             <?php
                 if (isset($update_danhmuc_combo)){
@@ -43,7 +37,7 @@
                                             <tr>
                                                 <th scope="row">Tên danh mục: </th>
                                                 <td class="was-validated">
-                                                    <input type='text' class='form-control' required style="width: 50%;" name="ten_danhmuc_combo" value="<?php echo $result['ten_danhmuc_combo'] ?>">
+                                                    <input type='text' class='form-control' required  name="ten_danhmuc_combo" value="<?php echo $result['ten_danhmuc_combo'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -61,7 +55,10 @@
                                             <tr>
                                                 <th></th>
                                                 <td>
-                                                    <button type="submit" name="sua_danhmuc_combo" class="btn btn-outline-danger">Sửa</button>
+                                                    <button type="submit" name="sua_danhmuc_combo" class="btn btn-outline-danger font-weight-bold">
+                                                        <i class="fas fa-pen"></i>  
+                                                        Sửa
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </tbody>

@@ -18,14 +18,11 @@
     ?>
     <div class="container danh-sach-san-pham" style="margin-top: 100px; ">
         <div >
-            <h1 class="title">DANH SÁCH ĐƠN HÀNG MỚI</h1>
+            <h1 class="alert alert-secondary" role="alert" >DANH SÁCH ĐƠN HÀNG MỚI</h1>
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="donHangMoi.php">Đơn hàng mới</a>
-                </li>
+                <div class="col-8"></div>
                 <div class="col-4">
                     <form class="d-flex" action="timKiemDonHangMoi.php" method="get">
                         <input name="timkiem-donhang" class="form-control " type="search" placeholder="Search" aria-label="Search">

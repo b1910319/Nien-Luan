@@ -23,14 +23,16 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container them-danh-muc" style="margin-top: 100px;">
         <div class="">
-            <h1 class="title">THÊM COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >THÊM COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themCombo.php">Thêm combo</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachCombo.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách combo
+                </button>
+            </a>
+        </div>
         <div class="them-danh-muc-body">
             <form action="themCombo.php" method="POST">
                 <?php
@@ -43,7 +45,7 @@
                         <tr>
                             <th scope="row">Tên combo: </th>
                             <td class="was-validated">
-                                <input type='text' class='form-control' required style="width: 50%;" name="ten_combo">
+                                <input type='text' class='form-control' required  name="ten_combo">
                             </td>
                         </tr>
                         <tr>
@@ -55,7 +57,7 @@
                         <tr>
                             <th scope="row">Danh mục combo: </th>
                             <td>
-                                <select class="custom-select" id="gender2" style="width: 50%;" name="danhmuc_combo">
+                                <select class="custom-select" id="gender2"  name="danhmuc_combo">
                                 <option selected>Choose...</option>
                                 <?php
                                         $list_danhmuc_combo = $danhMucCombo->show_danhmuc_combo();
@@ -73,7 +75,10 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button name="themCombo" type="submit" class="btn btn-outline-danger">Thêm</button>
+                                <button name="themCombo" type="submit" class="btn btn-outline-danger font-weight-bold">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
 

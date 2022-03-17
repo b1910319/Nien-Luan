@@ -27,69 +27,66 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container sua-danh-muc" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA DANH MỤC SẢN PHẨM</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA BỘ SƯU TẬP</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaDanhMuc.php">Sửa danh mục</a></li>
-            </ol>
-        </nav>
         <div class="them-danh-muc-body">
-        <?php
-                    if (isset($update_danhmuc)){
-                        echo $update_danhmuc;
-                    }
-                ?>
-                <?php
-                    $layTen = $boSuuTap->layBoSuuTap($ma);
-                    if ($layTen){
-                        while ($result = $layTen->fetch_assoc()){
-                            ?>
-                                <form action="" method="POST">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Tên bộ sưu tập: </th>
-                                                <td class="was-validated">
-                                                    <input type='text' class='form-control' required style="width: 50%;" name="ten_bosuutap" value="<?php echo $result['ten_bosuutap'] ?>">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Danh mục cha: </th>
-                                                <td>
-                                                    <select class="custom-select" id="gender2" style="width: 50%;" name="bosuutap_cha">
-                                                    <option selected>Choose...</option>
-                                                    <?php
-                                                            $list_bosuutap = $boSuuTap->show_bosuutap();
-                                                            if ($list_bosuutap){
-                                                                while($result = $list_bosuutap->fetch_assoc()){
-                                                                    ?>
-                                                                <option
-                                                                <?php
-                                                                    if ($result['ma_bosuutap'] == $cha){  echo 'selected';   }
+            <?php
+                if (isset($update_danhmuc)){
+                    echo $update_danhmuc;
+                }
+            ?>
+            <?php
+                $layTen = $boSuuTap->layBoSuuTap($ma);
+                if ($layTen){
+                    while ($result = $layTen->fetch_assoc()){
+                        ?>
+                            <form action="" method="POST">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Tên bộ sưu tập: </th>
+                                            <td class="was-validated">
+                                                <input type='text' class='form-control' required  name="ten_bosuutap" value="<?php echo $result['ten_bosuutap'] ?>">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Danh mục cha: </th>
+                                            <td>
+                                                <select class="custom-select" id="gender2"  name="bosuutap_cha">
+                                                <option selected>Choose...</option>
+                                                <?php
+                                                        $list_bosuutap = $boSuuTap->show_bosuutap();
+                                                        if ($list_bosuutap){
+                                                            while($result = $list_bosuutap->fetch_assoc()){
                                                                 ?>
-                                                                value="<?php echo $result['ma_bosuutap'] ?>"><?php echo $result['ten_bosuutap'] ?></option>
-                                                                <?php
-                                                                }
+                                                            <option
+                                                            <?php
+                                                                if ($result['ma_bosuutap'] == $cha){  echo 'selected';   }
+                                                            ?>
+                                                            value="<?php echo $result['ma_bosuutap'] ?>"><?php echo $result['ten_bosuutap'] ?></option>
+                                                            <?php
                                                             }
-                                                    ?>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <td>
-                                                    <button type="submit" class="btn btn-outline-danger">Sửa</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </form>
-                            <?php
-                        }
+                                                        }
+                                                ?>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>
+                                                <button type="submit" class="btn btn-outline-danger font-weight-bold">
+                                                    <i class="fas fa-pen"></i>  
+                                                    Sửa
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        <?php
                     }
-                ?>
+                }
+            ?>
         </div>
     </div>
 </html>

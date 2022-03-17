@@ -20,33 +20,30 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container them-tinh" style="margin-top: 100px;">
         <div>
-            <h1 class="title">THÊM XÃ</h1>
+            <h1 class="alert alert-secondary" role="alert" >THÊM XÃ</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themXa.php">Thêm Xã</a></li>
-            </ol>
-        </nav>
+        <div class="">
+            <a href="danhSachXa.php">
+                <button type="button" class="btn danhsach" >
+                    <i class="fas fa-outdent"></i> 
+                    Danh sách xã
+                </button>
+            </a>
+        </div>
         <div class=" them-tinh-body">
             <form action="" method="POST">
-                <!-- <?php
-                    if (isset($insert_tinh)){
-                        echo $insert_tinh;
-                    }
-                ?> -->
                 <table class="table">
                     <tbody>
                     <tr>
                             <th scope="row">Xã: </th>
                             <td class="was-validated">
-                                <input type='text' class='form-control' required style="width: 50%;" name="ten_xa">
+                                <input type='text' class='form-control' required  name="ten_xa">
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Huyện: </th>
                             <td class="was-validated">
-                                <select name="ten_huyen"  class="custom-select" id="gender2" style="width: 50%;">
+                                <select name="ten_huyen"  class="custom-select" id="gender2" >
                                     <?php
                                         $layhuyen = $huyen->show_huyen();
                                         if ($layhuyen){
@@ -57,14 +54,16 @@
                                             }
                                         }
                                     ?>
-                                    
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button type="submit" class="btn btn-outline-danger">Thêm</button>
+                                <button type="submit" class="btn btn-outline-danger font-weight-bold">
+                                    <i class="fas fa-plus-square"></i>
+                                    Thêm
+                                </button>
                             </td>
                         </tr>
                     </tbody>

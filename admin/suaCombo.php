@@ -28,14 +28,8 @@
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-danh-muc" style="margin-top: 100px;">
         <div >
-            <h1 class="title">SỬA COMBO</h1>
+            <h1 class="alert alert-secondary" role="alert" >SỬA COMBO</h1>
         </div>
-        <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="suaCombo.php">Sửa combo</a></li>
-            </ol>
-        </nav>
         <div class="them-danh-muc-body">
             <?php
                 if (isset($update_combo)){
@@ -53,7 +47,7 @@
                                             <tr>
                                                 <th scope="row">Tên combo: </th>
                                                 <td class="was-validated">
-                                                    <input type='text' class='form-control' required style="width: 50%;" name="ten_combo" value="<?php echo $result['ten_combo'] ?>">
+                                                    <input type='text' class='form-control' required  name="ten_combo" value="<?php echo $result['ten_combo'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -73,7 +67,7 @@
                                                 <th scope="row">Danh mục combo: </th>
                                                 <td>
                                                     <select class="custom-select" id="gender2" name="danhmuc_combo">
-                                                        <option selected>Choose...</option>
+                                                        <option selected>Chọn danh mục combo</option>
                                                         <?php
                                                             $danhMucCombo = new danhMucCombo();
                                                             $danhsach_danhmuc_combo = $danhMucCombo->show_danhmuc_combo();
@@ -95,7 +89,10 @@
                                             <tr>
                                                 <th></th>
                                                 <td>
-                                                    <button name="sua_combo" type="submit" class="btn btn-outline-danger">Sửa</button>
+                                                    <button name="sua_combo" type="submit" class="btn btn-outline-danger font-weight-bold">
+                                                    <i class="fas fa-pen"></i>
+                                                        Sửa
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </tbody>

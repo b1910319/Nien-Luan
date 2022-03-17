@@ -40,7 +40,7 @@
         </div>
     </div>
     <script>
-        new Morris.Line({
+        new Morris.Bar({
             element: 'myfirstchart',
             data: [
                 <?php
@@ -64,7 +64,7 @@
         });
     </script>
     <script>
-        new Morris.Bar({
+        new Morris.Line({
             element: 'chartSP',
             data: [
                 <?php
