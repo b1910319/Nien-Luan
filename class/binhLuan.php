@@ -68,5 +68,9 @@
             $result = $this->database->delete($query);
             header("Location: index.php");
         }
+        public function delete_binhluan_admin($maBLXoa){
+            $query = "DELETE FROM `binhluan` WHERE ma_binhluan = $maBLXoa";
+            $result = $this->database->delete($query);
+        }
     }
 ?>

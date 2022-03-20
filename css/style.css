@@ -831,14 +831,53 @@ footer{
     margin-left:40px ;
 }
 /*  */
+/* -------------------------------trang lịch sử đơn hàng  */
+.dang-xu-ly{
+    color: white;
+    background-color: #ee3500;
+    font-weight: bold; 
+}
+.dang-xu-ly:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #ee3500;
+    background-color: white;
+}
+.da-nhan-hang{
+    color: white;
+    background-color: #038018;
+    font-weight: bold; 
+}
+.da-nhan-hang:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #038018;
+    background-color: white;
+}
+.mualai{
+    color: white;
+    background-color: #121e96;
+    font-weight: bold; 
+}
+.mualai:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #121e96;
+    background-color: white;
+}
+.huy{
+    color: white;
+    background-color: #750000;
+    font-weight: bold; 
+}
+.huy:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #750000;
+    background-color: white;
+}
 
-
-
-
-
-
-
-
+/*  */
 
 
 

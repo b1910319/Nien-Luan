@@ -7,14 +7,17 @@
     include_once("class/boSuuTap.php");
     include_once("class/gioHang.php");
     include_once("class/binhLuan.php");
+    include_once("class/luotXem.php");
+    $luotXem = new luotXem();
     $binhLuan = new binhLuan();
     $boSuuTap = new boSuuTap();
     $hinhanh = new hinhAnh();
     $sanPham = new sanPham();
     $gioHang = new gioHang();
-    if (isset($_GET['masp']) && $_GET['masp'] != NULL) {
+    if (isset($_GET['masp']) && $_GET['masp'] != NULL ) {
         $masp = $_GET['masp'];
         $laysanpham = $sanPham->laySanPham($masp);
+        $luotxem = $luotXem->insert_luotxem($masp);
     }
     if (isset($_POST['binhluan'])){
         $binhluan_sanpham = $binhLuan->insert_binhluan();
@@ -24,6 +27,7 @@
         $maBLXoa = $_GET['maBLXoa'];
         $delete_binhluan = $binhLuan->delete_binhluan($maBLXoa);
     }
+    
 ?>
 
 <body>
@@ -96,12 +100,25 @@
                         if (isset($_GET['masp']) && $_GET['masp'] != NULL) {
                             $masp = $_GET['masp'];
                             $laysanpham = $sanPham->laySanPham($masp);
+                            $layluotxem = $luotXem->show_luotxem($masp);
                         }
                         if ($laysanpham) {
                             while ($resultSP = $laysanpham->fetch_assoc()) {
+                                if($layluotxem){
+                                    $resultLX = $layluotxem->fetch_assoc();
+                                }
                                 ?>
-                                        <div class="chitiet-title">
-                                        <h1><?php echo $resultSP['ten_sanpham'] ?></h1>
+                                    <div class="chitiet-title">
+                                        <center>
+                                            <button type="button" class="btn position-relative">
+                                                <h1><?php echo $resultSP['ten_sanpham']?></h1>
+                                                <span class="position-absolute top-0 start-100 translate-middle  rounded-pill badge bg-success">
+                                                    <i class="fas fad fa-eye"></i> <?php echo $resultLX['so_luotxem'] ?>
+                                                    <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                            </button>
+                                        </center>
+                                        
                                         <p class="masp">Mã sản phẩm: <?php echo $resultSP['ma_sanpham'] ?></p>
                                         <p class="tongsoluongsp">Sản phẩm còn lại: <?php echo $resultSP['tongsoluong_sanpham'] ?></p>
                                         <p class="card-price alert alert-danger giasp" role="alert"> <i class="fas fa-tags"></i>
@@ -319,9 +336,9 @@
                 <div class="col-3">
                     <nav class="navbar navbar-light ">
                         <div class="container-fluid">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            <form class="d-flex" action="timKiem.php" method="get" >
+                                <input name="timkiem" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+                                <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
                     </nav>
@@ -411,7 +428,7 @@
                             <?php
                                 if($ma_khachhang == $resultBL['ma_nguoidung']){
                                     ?>
-                                        <a href="suaBinhLuan.php?maBL=<?php echo $resultBL['ma_binhluan'] ?>">
+                                        <a href="suaBinhLuan.php?maBL=<?php echo $resultBL['ma_binhluan'] ?>?maSP=<?php echo $resultBL['ma_sanpham'] ?>">
                                             <i class="fas fa-pen"></i> Chỉnh sửa
                                         </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a onclick="return confirm('Bạn có muốn xóa bình luận không?')" href="?maBLXoa=<?php echo $resultBL['ma_binhluan'] ?>">

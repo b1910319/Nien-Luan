@@ -48,12 +48,12 @@
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Tên sản phẩm</th>
-                            <th scope="col">Mã sản phẩm</th>
-                            <th scope="col">Hình ảnh</th>
-                            <th scope="col">Mã hình ảnh</th>
-                            <th scope="col">Quản lý</th>
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Tên sản phẩm</th>
+                            <th scope="col" class="tieude-bang">Mã sản phẩm</th>
+                            <th scope="col" class="tieude-bang">Hình ảnh</th>
+                            <th scope="col" class="tieude-bang">Mã hình ảnh</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,10 +76,15 @@
                                             <td><img src="uploads/<?php echo $result['hinhanh'] ?>" width="100px"></td>
                                             <td><?php echo $result['ma_hinhanh'] ?></td>
                                             <td>
-                                                <a href="suaHinhAnh.php?ma=<?php echo $result['ma_hinhanh'] ?>"><i class="fas fa-user-edit"></i></a> 
-                                                || 
+                                                <a href="suaHinhAnh.php?ma=<?php echo $result['ma_hinhanh'] ?>">
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a>  
                                                 <a onclick="return confirm('Bạn có muốn xóa hình ảnh của <?php echo $resultSP['ten_sanpham'] ?> không?')" href="?maXoa=<?php echo $result['ma_hinhanh'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

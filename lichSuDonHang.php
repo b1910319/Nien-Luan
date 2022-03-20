@@ -16,6 +16,11 @@
                         $thoigian = $_GET['thoigian'];
                         $donhang_danhan = $donHang->donhang_danhan($maDH, $thoigian);
                     }
+                    //hủy đơn hàng
+                    if(isset($_GET['maDHHuy']) && $_GET['maDHHuy'] != NULL){
+                        $maDHHuy = $_GET['maDHHuy'];
+                        $huy_donhang = $donHang->huy_donhang($maDHHuy);
+                    }
                 ?>
                 <table class="table table-hover">
                     <thead>
@@ -79,16 +84,36 @@
                                         <td>
                                             <?php
                                                 if ($resultDH['tinhtrang_donhang'] == 0){
-                                                    echo '<a href="#" style="color: #eb3007; font-weight: bold;">Đang chờ xử lý</a>';
+                                                    $maDHHuy = $resultDH['ma_donhang'];
+                                                    ?>
+                                                        <a href="#" >
+                                                            <button type="button" class="btn dang-xu-ly">
+                                                                Đang chờ xử lý
+                                                            </button>
+                                                        </a>
+                                                        <a href="?maDHHuy=<?php echo $maDHHuy ?>" >
+                                                            <button type="button" class="btn huy">
+                                                                Hủy
+                                                            </button>
+                                                        </a>
+                                                    <?php
                                                 }
                                                 elseif ($resultDH['tinhtrang_donhang'] == 1){
                                                     ?>
-                                                        <a href="?maDH=<?php echo $resultDH['ma_donhang'] ?>&thoigian=<?php echo $resultDH['ngay_dathang'] ?>" style="color: #038018;font-weight: bold;">Đã nhận hàng</a>
+                                                        <a href="?maDH=<?php echo $resultDH['ma_donhang'] ?>&thoigian=<?php echo $resultDH['ngay_dathang'] ?>" >
+                                                            <button type="button" class="btn da-nhan-hang">
+                                                                Đã nhận hàng
+                                                            </button>
+                                                        </a>
                                                     <?php
                                                 }
                                                 else{
                                                     ?>
-                                                        <a href="chiTietSanPham.php?masp=<?php echo $resultDH['ma_sanpham'] ?>" style="color: #9100c4;font-weight: bold;">Mua lại</a>
+                                                        <a href="chiTietSanPham.php?masp=<?php echo $resultDH['ma_sanpham'] ?>">
+                                                            <button type="button" class="btn mualai">
+                                                                Mua lại
+                                                            </button>
+                                                        </a>
                                                     <?php
                                                 }
                                             ?>

@@ -24,8 +24,11 @@
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
     <div class="container sua-phong" style="margin-top: 100px;">
-        <div>
-            <h1 class="alert alert-secondary" role="alert" >SỬA THÔNG TIN PHÒNG</h1>
+        <div class="alert alert-secondary row" role="alert">
+            <a href="danhSachPhong.php" class="col-2" style="font-size: 20px; color: #121e96; font-weight: bold;">
+                <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại
+            </a>
+            <h1 class="col-10">SỬA THÔNG TIN PHÒNG</h1>
         </div>
         <div class="sua-phong-body">
             <?php

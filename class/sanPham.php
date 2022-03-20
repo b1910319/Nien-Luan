@@ -193,5 +193,10 @@
             $result = $this->database->select($query);
             return $result;
         }
+        public function dem_sanpham_danhmuc($maDM){
+            $query= "SELECT COUNT(ma_sanpham) as  'tong_sanpham_danhmuc' FROM `sanpham` WHERE ma_danhmuc = '$maDM'";
+            $result = $this->database->select($query);
+            return $result;
+        }
     }
 ?>

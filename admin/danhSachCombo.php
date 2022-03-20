@@ -44,12 +44,12 @@
                 <table class="table table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Tên combo</th>
-                            <th scope="col">Mã combo</th>
-                            <th scope="col">Tên danh mục combo</th>
-                            <th scope="col">Tóm tắt combo</th>
-                            <th scope="col">Quản lý</th>
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Tên combo</th>
+                            <!-- <th scope="col">Mã combo</th> -->
+                            <th scope="col" class="tieude-bang">Tên danh mục combo</th>
+                            <th scope="col" class="tieude-bang">Tóm tắt combo</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,19 +65,22 @@
                                         $i++;
                                         ?>
                                             <tr>
-                                                <th scope="row"><?php echo $i ?></th>
-                                                <td><?php echo $result['ten_combo'] ?></td>
-                                                <td><?php echo $result['ma_combo'] ?></td>
-                                                <td><?php echo $resultDMC['ten_danhmuc_combo'] ?></td>
-                                                <td><?php echo $result['tomtat_combo'] ?></td>
-                                                <td>
-                                                    <a
-                                                        href="suaCombo.php?ma=<?php echo $result['ma_combo'] ?>"><i
-                                                            class="fas fa-user-edit"></i></a>
-                                                    ||
+                                                <th scope="row" style="width: 5%;"><?php echo $i ?></th>
+                                                <td style="width: 20%;"><?php echo $result['ten_combo'] ?></td>
+                                                <!-- <td><?php echo $result['ma_combo'] ?></td> -->
+                                                <td style="width: 20%;"><?php echo $resultDMC['ten_danhmuc_combo'] ?></td>
+                                                <td style="width: 40%;"><?php echo $result['tomtat_combo'] ?></td>
+                                                <td style="width: 15%;">
+                                                    <a href="suaCombo.php?ma=<?php echo $result['ma_combo'] ?>">
+                                                        <button type="button" class="btn sua">
+                                                            <i class="fas fa-edit"></i>
+                                                        </button>
+                                                    </a>
                                                     <a onclick="return confirm('Bạn có muốn xóa danh mục <?php echo $result['ten_combo'] ?> không?')"
                                                         href="?maXoa=<?php echo $result['ma_combo'] ?>">
-                                                        <i class="fas fa-user-minus"></i>
+                                                        <button type="button" class="btn xoa">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
                                                     </a>
                                                 </td>
                                             </tr>

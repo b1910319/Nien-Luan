@@ -43,11 +43,11 @@
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Tên bộ sưu tập</th>
-                            <th scope="col">Mã bộ sưu tập</th>
-                            <th scope="col">Bộ sưu tập cha</th>
-                            <th scope="col">Quản lý</th>
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Tên bộ sưu tập</th>
+                            <th scope="col" class="tieude-bang">Mã bộ sưu tập</th>
+                            <th scope="col" class="tieude-bang">Bộ sưu tập cha</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,10 +68,15 @@
                                             <td><?php echo $result['ma_bosuutap'] ?></td>
                                             <td><?php echo $result1['ten_bosuutap'] ?></td>
                                             <td>
-                                                <a href="suaBoSuuTap.php?ma=<?php echo $result['ma_bosuutap'] ?>&cha=<?php echo $result['bosuutap_cha'] ?>"><i class="fas fa-user-edit"></i></a> 
-                                                || 
+                                                <a href="suaBoSuuTap.php?ma=<?php echo $result['ma_bosuutap'] ?>&cha=<?php echo $result['bosuutap_cha'] ?>">
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a>  
                                                 <a onclick="return confirm('Bạn có muốn xóa bộ sưu tập <?php echo $result['ten_bosuutap'] ?> không?')" href="?maXoa=<?php echo $result['ma_bosuutap'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

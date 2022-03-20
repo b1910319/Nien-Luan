@@ -44,11 +44,11 @@
                 <table class="table table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Tên danh mục</th>
-                            <th scope="col">Mã danh mục</th>
-                            <th scope="col">Hình ảnh</th>
-                            <th scope="col">Quản lý</th>
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Tên danh mục</th>
+                            <th scope="col" class="tieude-bang">Mã danh mục</th>
+                            <th scope="col" class="tieude-bang">Hình ảnh</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,13 +65,16 @@
                                                 <td><?php echo $result['ma_danhmuc_combo'] ?></td>
                                                 <td><img src="uploads/<?php echo $result['hinhanh_danhmuc_combo'] ?>" width="100px"></td>
                                                 <td>
-                                                    <a
-                                                        href="suaDanhMucCombo.php?ma=<?php echo $result['ma_danhmuc_combo'] ?>"><i
-                                                            class="fas fa-user-edit"></i></a>
-                                                    ||
+                                                    <a href="suaDanhMucCombo.php?ma=<?php echo $result['ma_danhmuc_combo'] ?>">
+                                                        <button type="button" class="btn sua">
+                                                            <i class="fas fa-edit"></i>
+                                                        </button>
+                                                    </a>
                                                     <a onclick="return confirm('Bạn có muốn xóa danh mục <?php echo $result['ten_danhmuc_combo'] ?> không?')"
                                                         href="?maXoa=<?php echo $result['ma_danhmuc_combo'] ?>">
-                                                        <i class="fas fa-user-minus"></i>
+                                                        <button type="button" class="btn xoa">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
                                                     </a>
                                                 </td>
                                             </tr>

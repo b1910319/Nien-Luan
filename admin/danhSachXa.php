@@ -49,11 +49,11 @@
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Xã</th>
-                            <th scope="col">Mã Xã</th>
-                            <th scope="col">Xã thuộc Huyện</th>
-                            <th scope="col">Quản lý</th>
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Xã</th>
+                            <th scope="col" class="tieude-bang">Mã Xã</th>
+                            <th scope="col" class="tieude-bang">Xã thuộc Huyện</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,10 +74,15 @@
                                             <td><?php echo $result['ma_xa'] ?></td>
                                             <td><?php echo $resultH['ten_huyen'] ?></td>
                                             <td >
-                                                <a href="suaXa.php?ma=<?php echo $result['ma_xa'] ?>" ><i class="fas fa-user-edit" ></i></a> 
-                                                || 
+                                                <a href="suaXa.php?ma=<?php echo $result['ma_xa'] ?>" >
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a> 
                                                 <a onclick="return confirm('Bạn có muốn xóa <?php echo $result['ten_xa'] ?> không?')" href="?maXoa=<?php echo $result['ma_xa'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

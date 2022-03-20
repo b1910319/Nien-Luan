@@ -22,10 +22,12 @@
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
     <div class="container sua-hinh-anh-san-pham" style="margin-top: 100px;">
-        <div >
-            <h1 class="alert alert-secondary" role="alert" >SỬA HÌNH ẢNH COMBO</h1>
+        <div class="alert alert-secondary row" role="alert">
+            <a href="danhSachHinhAnhCombo.php" class="col-2" style="font-size: 20px; color: #121e96; font-weight: bold;">
+                <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại
+            </a>
+            <h1 class="col-10">SỬA HÌNH ẢNH COMBO</h1>
         </div>
-        
         <div class="sua-hinh-anh-san-pham-body">
             <?php 
                 $hinhAnhCombo = new hinhAnhCombo();

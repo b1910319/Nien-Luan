@@ -118,5 +118,25 @@ use Carbon\Carbon;
             $result = $this->database->select($query);
             return $result;
         }
+        public function dem_donhang_xuly(){
+            $query = "SELECT COUNT(ma_donhang) as tong_donhang_xuly FROM `donhang` WHERE tinhtrang_donhang = 0";
+            $result = $this->database->select($query);
+            return $result;
+        }
+        public function dem_donhang_vanchuyen(){
+            $query = "SELECT COUNT(ma_donhang) as tong_donhang_vanchuyen FROM `donhang` WHERE tinhtrang_donhang = 1";
+            $result = $this->database->select($query);
+            return $result;
+        }
+        public function dem_donhang_danhan(){
+            $query = "SELECT COUNT(ma_donhang) as tong_donhang_danhan FROM `donhang` WHERE tinhtrang_donhang = 2";
+            $result = $this->database->select($query);
+            return $result;
+        }
+        public function huy_donhang($maDHHuy){
+            $query = "DELETE FROM `donhang` WHERE ma_donhang = '$maDHHuy'";
+            $result = $this->database->delete($query);
+            return $result;
+        }
     }
 ?>

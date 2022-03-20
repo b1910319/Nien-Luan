@@ -27,7 +27,26 @@
         <!--  -->
         <br><br><br>
         <div class="container binhluan ">
-            <h3 ><strong>Sửa bình luận</strong></h3>
+            <div class="row mb-3">
+                <div class="col">
+                    <?php
+                        $lay_binhluan = $binhLuan->lay_binhluan_maBL($maBL);
+                        if($lay_binhluan){
+                            $resultBL = $lay_binhluan->fetch_assoc();
+                            ?>
+                                <a href="chiTietSanPham.php?masp=<?php echo $resultBL['ma_sanpham'] ?>">
+                                    <button type="button" class="btn btn-outline-success" style="font-weight: bold;">
+                                        <i class="fas fa-angle-double-left"></i> Trở lại
+                                    </button>
+                                </a>
+                            <?php
+                        }
+                    ?>
+                </div>
+                <div class="col">
+                    <h3>SỬA BÌNH LUẬN</h3>
+                </div>
+            </div>
             <?php
                 $ten_khachhang = Session::get('login_ten');
                 $ma_khachhang = Session::get('login_ma');

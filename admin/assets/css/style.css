@@ -39,6 +39,59 @@ tr:hover td{
     color: white;
     background-color: #038018;
 }
+.xoa{
+    color: white;
+    background-color: #ee3500;
+}
+.xoa:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #ee3500;
+    background-color: white;
+}
+.sua{
+    color: white;
+    background-color: #038018;
+}
+.sua:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #038018;
+    background-color: white;
+}
+.dang-xu-ly{
+    color: white;
+    background-color: #ee3500;
+    font-weight: bold; 
+}
+.dang-xu-ly:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #ee3500;
+    background-color: white;
+}
+.dang-van-chuyen{
+    color: white;
+    background-color: #121e96;
+    font-weight: bold; 
+}
+.dang-van-chuyen:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #121e96;
+    background-color: white;
+}
+.da-nhan-hang{
+    color: white;
+    background-color: #038018;
+    font-weight: bold; 
+}
+.da-nhan-hang:hover{
+    font-weight: bold; 
+    border: 1px solid white;
+    color: #038018;
+    background-color: white;
+}
 .danhsach{
     font-weight: bold; 
     border: 1px solid #cd9d14;
@@ -47,4 +100,9 @@ tr:hover td{
 .danhsach:hover{
     color: white;
     background-color: #cd9d14;
+}
+/* --------------------------------------------tiêu đề các bảng  */
+.tieude-bang{
+    color: white !important;
+    font-weight: bold !important;
 }

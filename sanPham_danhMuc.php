@@ -9,6 +9,7 @@
     $sanPham = new sanPham();
     if ( isset($_GET['maDM']) && $_GET['maDM']!= NULL){
         $maDM = $_GET['maDM'];
+        $dem_sanpham_danhmuc = $sanPham->dem_sanpham_danhmuc($maDM);
     }
     // if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['suasanpham'])){
     //     $update_sanpham = $sanPham->update_sanpham($_POST, $ma);
@@ -21,6 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAYA</title>
+
 </head>
 <body>
     <div class="container-fluid">
@@ -37,8 +39,11 @@
                             if ($layten_danhmuc){
                                 $resultTDM = $layten_danhmuc->fetch_assoc();
                             }
+                            if($dem_sanpham_danhmuc){
+                                $resultDemSP = $dem_sanpham_danhmuc->fetch_assoc();
+                            }
                         ?>
-                        <p class="btn btn-primary"> Sản phẩm của danh mục " <?php echo $resultTDM['ten_danhmuc'] ?> "</p>
+                        <p class="btn btn-primary"> Có "<?php echo $resultDemSP['tong_sanpham_danhmuc'] ?>" sản phẩm của danh mục " <?php echo $resultTDM['ten_danhmuc'] ?> "</p>
                     </div>
                 </div>
             </div>

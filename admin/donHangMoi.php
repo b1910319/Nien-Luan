@@ -32,6 +32,38 @@
             </ol>
         </nav>
         <div class="danh-sach-san-pham-body">
+            <div class="row">
+                <div class="alert  col" role="alert" style="margin-right: 30px; background-color: #ee3500; color: white; font-weight: bold">
+                    Đơn hàng đang chờ xử lý:
+                    <?php
+                        $dem_donhang_xuly = $donHang->dem_donhang_xuly();
+                        if($dem_donhang_xuly){
+                            $resultDHXuLy = $dem_donhang_xuly->fetch_assoc();
+                            echo $resultDHXuLy['tong_donhang_xuly'];
+                        }
+                    ?>
+                </div>
+                <div class="alert col" role="alert" style="margin-right: 30px; background-color: #121e96; color: white; font-weight: bold">
+                    Đơn hàng đang vận chuyển: 
+                    <?php
+                        $dem_donhang_vanchuyen = $donHang->dem_donhang_vanchuyen();
+                        if($dem_donhang_vanchuyen){
+                            $resultDHVanChuyen = $dem_donhang_vanchuyen->fetch_assoc();
+                            echo $resultDHVanChuyen['tong_donhang_vanchuyen'];
+                        }
+                    ?>
+                </div>
+                <div class="alert col" role="alert" style="background-color: #038018; color: white; font-weight: bold">
+                    Đơn hàng đã nhận:
+                    <?php
+                        $dem_donhang_danhan = $donHang->dem_donhang_danhan();
+                        if($dem_donhang_danhan){
+                            $resultDHDaNhan = $dem_donhang_danhan->fetch_assoc();
+                            echo $resultDHDaNhan['tong_donhang_danhan'];
+                        }
+                    ?>
+                </div>
+            </div>
             <div class=" table-responsive ">
                 <?php
                     if (isset($_GET['maDH'])){
@@ -42,18 +74,18 @@
                 ?>
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Ngày đặt</th>
-                            <th scope="col">Tên sản phẩm</th>
-                            <th scope="col">Gía</th>
-                            <th scope="col">Ghi chú</th>
-                            <th scope="col">Số lượng</th>
-                            <th scope="col">Thành tiền</th>
-                            <th scope="col">Tên khách hàng</th>
-                            <th scope="col">Số điện thoại</th>
-                            <th scope="col">Địa chỉ</th>
-                            <th scope="col">Quản lý</th>
+                        <tr >
+                            <th scope="col" class="tieude-bang">STT</th>
+                            <th scope="col" class="tieude-bang">Ngày đặt</th>
+                            <th scope="col" class="tieude-bang">Tên sản phẩm</th>
+                            <th scope="col" class="tieude-bang">Gía</th>
+                            <th scope="col" class="tieude-bang">Ghi chú</th>
+                            <th scope="col" class="tieude-bang">Số lượng</th>
+                            <th scope="col" class="tieude-bang">Thành tiền</th>
+                            <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                            <th scope="col" class="tieude-bang">Số điện thoại</th>
+                            <th scope="col" class="tieude-bang">Địa chỉ</th>
+                            <th scope="col" class="tieude-bang">Quản lý</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,17 +120,30 @@
                                                 <?php
                                                     if ($resultDH['tinhtrang_donhang'] == 0 ){
                                                         ?>
-                                                            <a href="?maDH=<?php echo $resultDH['ma_donhang'] ?>&thoigian=<?php echo $resultDH['ngay_dathang'] ?>" style="color: #eb3007; font-weight: bold;">Đang chờ xử lý</a>
+                                                            <a href="?maDH=<?php echo $resultDH['ma_donhang'] ?>&thoigian=<?php echo $resultDH['ngay_dathang'] ?>">
+                                                                <button type="button" class="btn dang-xu-ly">
+                                                                    Đang chờ xử lý
+                                                                </button>
+                                                            
+                                                            </a>
                                                         <?php
                                                     }
                                                     elseif ($resultDH['tinhtrang_donhang'] == 1 ){
                                                         ?>
-                                                            <span style="color: #038018; font-weight: bold;">Đang vận chuyển</span>
+                                                            <span>
+                                                                <button type="button" class="btn dang-van-chuyen">
+                                                                    Đang vận chuyển
+                                                                </button>
+                                                            </span>
                                                         <?php
                                                     }
                                                     else{
                                                         ?>
-                                                            <span style="color: #9100c4; font-weight: bold;">Đã nhận hàng</span>
+                                                            <span >
+                                                                <button type="button" class="btn da-nhan-hang">
+                                                                    Đã nhận hàng
+                                                                </button>
+                                                            </span>
                                                         <?php
                                                     }
                                                 ?>
