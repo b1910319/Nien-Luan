@@ -17,7 +17,7 @@ use Carbon\Carbon;
             $this ->format = new fomat();
         }
         public function thongke_danhso_ngay (){
-            $query = "SELECT ngay_thongke , SUM(tongtien) AS tongtien_ngay FROM thongke GROUP BY ngay_thongke";
+            $query = "SELECT ngay_thongke , SUM(tongtien) AS tongtien_ngay, SUM(soluong_ban) AS tongban_ngay FROM thongke GROUP BY ngay_thongke";
             $result = $this->database->select($query);
             return $result;
         }
@@ -27,7 +27,7 @@ use Carbon\Carbon;
             return $result;
         }
         public function thongke_danhso_nam (){
-            $query = "SELECT nam_thongke , SUM(tongtien) AS tongtien_nam FROM thongke GROUP BY nam_thongke";
+            $query = "SELECT nam_thongke , SUM(tongtien) AS tongtien_nam, SUM(soluong_ban) AS tongban_nam FROM thongke GROUP BY nam_thongke";
             $result = $this->database->select($query);
             return $result;
         }

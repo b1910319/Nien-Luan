@@ -49,11 +49,11 @@
                             ?>
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Tên khách hàng</th>
-                                        <th scope="col">Sđt khách hàng</th>
-                                        <th scope="col">Tên sản phẩm</th>
-                                        <th scope="col">Số lượng</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Sđt khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Tên sản phẩm</th>
+                                        <th scope="col" class="tieude-bang">Số lượng</th>
                                     </tr>
                                 </thead>
                             <?php

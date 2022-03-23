@@ -42,11 +42,11 @@
                             ?>
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Tên danh mục</th>
-                                        <th scope="col">Mã danh mục</th>
-                                        <th scope="col">Danh mục cha</th>
-                                        <th scope="col">Quản lý</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Tên danh mục</th>
+                                        <th scope="col" class="tieude-bang">Mã danh mục</th>
+                                        <th scope="col" class="tieude-bang">Danh mục cha</th>
+                                        <th scope="col" class="tieude-bang">Quản lý</th>
                                     </tr>
                                 </thead>
                             <?php
@@ -81,13 +81,15 @@
                                             <td><?php echo $result['ma_danhmuc'] ?></td>
                                             <td><?php echo $result1['ten_danhmuc'] ?></td>
                                             <td>
-                                                <a
-                                                    href="suaDanhMuc.php?ma=<?php echo $result['ma_danhmuc'] ?>&cha=<?php echo $result['danhmuc_cha'] ?>"><i
-                                                        class="fas fa-user-edit"></i></a>
-                                                ||
-                                                <a onclick="return confirm('Bạn có muốn xóa danh mục <?php echo $result['ten_danhmuc'] ?> không?')"
-                                                    href="danhSachDanhMuc.php?maXoa=<?php echo $result['ma_danhmuc'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                <a href="suaDanhMuc.php?ma=<?php echo $result['ma_danhmuc'] ?>&cha=<?php echo $result['danhmuc_cha'] ?>">
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a>
+                                                <a onclick="return confirm('Bạn có muốn xóa danh mục <?php echo $result['ten_danhmuc'] ?> không?')" href="danhSachDanhMuc.php?maXoa=<?php echo $result['ma_danhmuc'] ?>">
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

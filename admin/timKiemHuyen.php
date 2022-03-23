@@ -29,7 +29,7 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <div class="">
+                <div class="col">
                     <a href="danhSachHuyen.php">
                         <button type="button" class="btn danhsach" >
                             <i class="fas fa-outdent"></i> 
@@ -37,7 +37,7 @@
                         </button>
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <form class="d-flex" action="timKiemHuyen.php" method="get">
                         <input name="timkiem-huyen" class="form-control " type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>
@@ -58,11 +58,11 @@
                             ?>
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Huyện</th>
-                                        <th scope="col">Mã Huyện</th>
-                                        <th scope="col">Huyện thuộc Tỉnh</th>
-                                        <th scope="col">Quản lý</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Huyện</th>
+                                        <th scope="col" class="tieude-bang">Mã Huyện</th>
+                                        <th scope="col" class="tieude-bang">Huyện thuộc Tỉnh</th>
+                                        <th scope="col" class="tieude-bang">Quản lý</th>
                                     </tr>
                                 </thead>
                             <?php
@@ -90,10 +90,15 @@
                                             <td><?php echo $result['ma_huyen'] ?></td>
                                             <td><?php echo $resultT['ten_tinh'] ?></td>
                                             <td >
-                                                <a href="suaHuyen.php?ma=<?php echo $result['ma_huyen'] ?>" ><i class="fas fa-user-edit" ></i></a> 
-                                                || 
+                                                <a href="suaHuyen.php?ma=<?php echo $result['ma_huyen'] ?>" >
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a> 
                                                 <a onclick="return confirm('Bạn có muốn xóa <?php echo $result['ten_huyen'] ?> không?')" href="danhSachHuyen.php?maXoa=<?php echo $result['ma_huyen'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

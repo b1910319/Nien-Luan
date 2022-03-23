@@ -28,7 +28,19 @@
             </ol>
         </nav>
         <div class="  thongke_doanhthu-ngay-body">
-            <h3 class="title">Thống kê doanh thu theo ngày</h3>
+            <div class="row">
+                <div class="col-10">
+                    <h3 class="title">Thống kê doanh thu theo ngày</h3>
+                </div>
+                <div class="col-2">
+                    <form action="xuatThongKeDoanhThuNgay.php" method="post" target="_blank ">
+                        <button type="submit" class="btn xuat_thongke" name="xuat_thongke">
+                            <i class="fas fa-chart-bar"></i> 
+                            Xuất file PDF
+                        </button>
+                    </form>
+                </div>
+            </div>
             <div id="myfirstchart" style="height: 250px;"></div>
         </div>
         
@@ -36,7 +48,6 @@
             <br>
             <h3 class="title">Thống kê sản phẩm bán theo ngày</h3>
             <div id="chartSP" style="height: 250px;"></div>
-            
         </div>
     </div>
     <script>

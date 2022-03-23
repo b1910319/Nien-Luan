@@ -138,7 +138,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-md-pie"></i>
-                            <span> TRANG CHỦ </span>
+                            <span> Trang Chủ </span>
                             <span class="badge badge-info badge-pill float-right"> 2 </span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -150,7 +150,7 @@
                     <li >
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="ion-ios-apps"></i>
-                            <span> DANH MỤC - SP </span>
+                            <span> Danh Mục Sản Phẩm </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -161,7 +161,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="fas fa-couch" style="font-size: 15px;"></i>
-                            <span> SẢN PHẨM </span>
+                            <span> Sản Phẩm </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -174,7 +174,7 @@
                     <li >
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="ion-ios-apps"></i>
-                            <span> DANH MỤC - COMBO </span>
+                            <span> Danh Mục Combo </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -185,7 +185,7 @@
                     <li >
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="fas fad fa-ellipsis-h"></i>
-                            <span> COMBO </span>
+                            <span> Combo </span>
                             <span class="badge badge-danger badge-pill float-right"> 2 </span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -198,7 +198,7 @@
                     <li >
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-md-speedometer"></i>
-                            <span> XUẤT XỨ </span>
+                            <span> Xuất Xứ </span>
                             <span class="badge badge-danger badge-pill float-right"> 8 </span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -210,7 +210,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-ios-list"></i>
-                            <span> BỘ SƯU TẬP </span>
+                            <span> Bộ Sưu Tập </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -222,7 +222,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-md-pie"></i>
-                            <span> PHÒNG </span>
+                            <span> Phòng </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -234,7 +234,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="fas fa-map-marker-alt"></i>
-                            <span> ĐỊA CHỈ </span>
+                            <span> Địa Chỉ </span>
                             <span class="badge badge-warning badge-pill float-right">12</span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -249,7 +249,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-md-map"></i>
-                            <span> GIỎ HÀNG </span>
+                            <span> Giỏ Hàng </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -259,7 +259,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="fas fa-cart-arrow-down"></i>
-                            <span> ĐƠN HÀNG </span>
+                            <span> Đơn Hàng </span>
                             <span class="badge badge-danger badge-pill float-right">New</span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -269,7 +269,7 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="fas fa-users"></i>
-                            <span> KHÁCH HÀNG </span>
+                            <span> Khách Hàng </span>
                             <span class="badge badge-danger badge-pill float-right">New</span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -279,38 +279,13 @@
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="fas fa-comment"></i>
-                            <span> BÌNH LUẬN </span>
+                            <span> Bình Luận </span>
                             <span class="badge badge-danger badge-pill float-right">New</span>
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="noiDungBinhLuan.php">Nội dung bình luận</a></li>
                         </ul>
                     </li>
-                    <!-- <li>
-                        <a href="javascript: void(0);" class="waves-effect">
-                            <i class="mdi mdi-share-variant"></i>
-                            <span> Multi Level </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="nav-second-level nav" aria-expanded="false">
-                            <li>
-                                <a href="javascript: void(0);">Level 1.1</a>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0);" aria-expanded="false">Level 1.2
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-third-level nav" aria-expanded="false">
-                                    <li>
-                                        <a href="javascript: void(0);">Level 2.1</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);">Level 2.2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li> -->
                 </ul>
             </div>
             <!-- End Sidebar -->

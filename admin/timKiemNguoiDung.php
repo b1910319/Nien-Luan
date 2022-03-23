@@ -43,13 +43,13 @@
                             ?>
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Mã khách hàng</th>
-                                        <th scope="col">Tên khách hàng</th>
-                                        <th scope="col">Sđt khách hàng</th>
-                                        <th scope="col">Email khách hàng</th>
-                                        <th scope="col">User khách hàng</th>
-                                        <th scope="col">Địa chỉ khách hàng</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Mã khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Sđt khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Email khách hàng</th>
+                                        <th scope="col" class="tieude-bang">User khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Địa chỉ khách hàng</th>
                                     </tr>
                                 </thead>
                             <?php

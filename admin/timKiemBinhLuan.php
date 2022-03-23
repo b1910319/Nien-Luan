@@ -47,11 +47,12 @@
                             ?>
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Tên khách hàng</th>
-                                        <th scope="col">Nội dung bình luận</th>
-                                        <th scope="col">Tên sản phẩm</th>
-                                        <th scope="col">Thời gian</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Nội dung bình luận</th>
+                                        <th scope="col" class="tieude-bang">Tên sản phẩm</th>
+                                        <th scope="col" class="tieude-bang">Thời gian</th>
+                                        <th scope="col" class="tieude-bang">Xóa bình luận</th>
                                     </tr>
                                 </thead>
                             <?php
@@ -85,6 +86,16 @@
                                             <td><?php echo $resultBL['noidung_binhluan'] ?></td>
                                             <td ><?php echo $resultSP['ten_sanpham'] ?></td>
                                             <td><?php echo $resultBL['thoigian_binhluan'] ?></td>
+                                            <td>
+                                                <a onclick="return confirm('Bạn có muốn xóa bình luận này không?')"
+                                                        href="noiDungBinhLuan.php?maXoa=<?php echo $resultBL['ma_binhluan']?>">
+                                                    <center>
+                                                        <button type="button" class="btn xoa">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    </center>
+                                                </a>
+                                            </td>
                                         </tr>
                                     <?php
                                 }

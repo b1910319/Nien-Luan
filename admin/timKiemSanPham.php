@@ -13,6 +13,9 @@
     <?php include_once("../class/xuatXu.php") ?>
     <?php include_once("../class/phong.php") ?>
     <?php include_once("../class/boSuuTap.php") ?>
+    <?php 
+        include_once("../class/combo.php");
+    ?>
     <?php
         include_once("../class/sanPham.php");
         $sanPham = new sanPham();
@@ -29,7 +32,7 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <div class="">
+                <div class="col">
                     <a href="danhSachSanPham.php">
                         <button type="button" class="btn danhsach" >
                             <i class="fas fa-outdent"></i> 
@@ -37,7 +40,7 @@
                         </button>
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <form class="d-flex" action="timKiemSanPham.php" method="get">
                         <input name="timkiem-sanpham" class="form-control " type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>
@@ -59,20 +62,17 @@
                             if ($timkiem_sanpham_ds){
                                 ?>
                                     <tr>
-                                        <th scope="col">STT</th>
-                                        <th scope="col">Tên sản phẩm</th>
-                                        <th scope="col">Gía</th>
-                                        <th scope="col">Tổng số lượng</th>
-                                        <th scope="col">Vật liệu</th>
-                                        <th scope="col">Kích thước</th>
-                                        <th scope="col">Màu sắc</th>
-                                        <th scope="col">Tóm tắt</th>
-                                        <th scope="col">Danh mục</th>
-                                        <th scope="col">Xuất xứ</th>
-                                        <th scope="col">Phòng</th>
-                                        <th scope="col">Bộ sưu tập</th>
-                                        <th scope="col">Loại sản phẩm</th>
-                                        <th scope="col">Quản lý</th>
+                                        <th scope="col" class="tieude-bang">STT</th>
+                                        <th scope="col" class="tieude-bang">Tên sản phẩm</th>
+                                        <th scope="col" class="tieude-bang">Gía</th>
+                                        <th scope="col" class="tieude-bang">Tổng số lượng</th>
+                                        <th scope="col" class="tieude-bang">Combo</th>
+                                        <th scope="col" class="tieude-bang">Danh mục</th>
+                                        <th scope="col" class="tieude-bang">Xuất xứ</th>
+                                        <th scope="col" class="tieude-bang">Phòng</th>
+                                        <th scope="col" class="tieude-bang">Bộ sưu tập</th>
+                                        <th scope="col" class="tieude-bang">Loại sản phẩm</th>
+                                        <th scope="col" class="tieude-bang">Quản lý</th>
                                     </tr>
                                 <?php
                             }
@@ -117,21 +117,30 @@
                                         $resultBST=$ten_bosuutap->fetch_assoc();
                                     }
                                      // 
+                                     // lấy tên combo của sản phẩm
+                                    $combo = new combo();
+                                    
+                                     // 
                                     ?>
                                         <tr>
-                                            <th scope="row"><?php echo $i ?></th>
-                                            <td><?php echo $result['ten_sanpham'] ?></td>
-                                            <td><?php echo number_format($result['gia_sanpham'], 0, ',', '.') . ' <sup>đ</sup>' ?></td>
-                                            <td><?php echo $result['tongsoluong_sanpham'] ?></td>
-                                            <td><?php echo $result['vatlieu_sanpham'] ?></td>
-                                            <td><?php echo $result['kichthuoc_sanpham'] ?></td>
-                                            <td><?php echo $result['mausac_sanpham'] ?></td>
-                                            <td><?php echo $result['tomtat_sanpham'] ?></td>
-                                            <td><?php echo $resultDM['ten_danhmuc'] ?></td>
-                                            <td><?php echo $resultXX['ten_xuatxu'] ?></td>
-                                            <td><?php echo $resultP['ten_phong'] ?></td>
-                                            <td><?php echo $resultBST['ten_bosuutap'] ?></td>
-                                            <td>
+                                            <th scope="row" style="width: 5%;"><?php echo $i ?></th>
+                                            <td style="width: 10%;"><?php echo $result['ten_sanpham'] ?></td>
+                                            <td style="width: 10%;"><?php echo number_format($result['gia_sanpham'], 0, ',', '.') . ' <sup>đ</sup>' ?></td>
+                                            <td style="width: 5%;"><?php echo $result['tongsoluong_sanpham'] ?></td>
+                                            <td style="width: 10%;">
+                                                <?php 
+                                                    $ten_combo = $combo->layCombo($result['ma_combo']);
+                                                    if($ten_combo){
+                                                        $resultC=$ten_combo->fetch_assoc();
+                                                        echo $resultC['ten_combo'];
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td style="width: 10%;"><?php echo $resultDM['ten_danhmuc'] ?></td>
+                                            <td style="width: 10%;"><?php echo $resultXX['ten_xuatxu'] ?></td>
+                                            <td style="width: 10%;"><?php echo $resultP['ten_phong'] ?></td>
+                                            <td style="width: 5%;"><?php echo $resultBST['ten_bosuutap'] ?></td>
+                                            <td style="width: 10%;">
                                                 <?php
                                                     if($result['loai_sanpham'] == 1){
                                                         echo 'Sản phẩm nổi bật';
@@ -140,11 +149,16 @@
                                                     }
                                                 ?>
                                             </td>
-                                            <td >
-                                                <a href="suaSanPham.php?ma=<?php echo $result['ma_sanpham'] ?>" ><i class="fas fa-user-edit" ></i></a> 
-                                                || 
+                                            <td style="width: 15%;" >
+                                                <a href="suaSanPham.php?ma=<?php echo $result['ma_sanpham'] ?>" >
+                                                    <button type="button" class="btn sua">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </a> 
                                                 <a onclick="return confirm('Bạn có muốn xóa hình ảnh của  <?php echo $result['ten_sanpham'] ?> không?')" href="danhSachSanPham.php?maXoa=<?php echo $result['ma_sanpham'] ?>">
-                                                    <i class="fas fa-user-minus"></i>
+                                                    <button type="button" class="btn xoa">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                         </tr>

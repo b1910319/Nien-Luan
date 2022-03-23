@@ -64,10 +64,11 @@
                                                             while ($resultSP = $layten_sanpham->fetch_assoc()){
                                                                 ?>
                                                                     <option 
-                                                                    <?php
-                                                                        if ($resultSP['ma_sanpham'] == $result['ma_sanpham'] ){ echo 'selected';}
-                                                                    ?>
-                                                                    value="<?php echo $resultSP['ma_sanpham'] ?>"><?php echo $resultSP['ten_sanpham'] ?></option>
+                                                                        <?php
+                                                                            if ($resultSP['ma_sanpham'] == $result['ma_sanpham'] ){ echo 'selected';}
+                                                                        ?>
+                                                                        value="<?php echo $resultSP['ma_sanpham'] ?>"><?php echo $resultSP['ten_sanpham'] ?>
+                                                                    </option>
                                                                 <?php
                                                             }
                                                         }

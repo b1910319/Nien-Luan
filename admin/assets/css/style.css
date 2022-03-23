@@ -1,5 +1,5 @@
 *{
-    font-size: 18px;
+    font-size: 17px;
 }
 /* ---------------------------trang thêm danh mục sản phẩm, trang danh sách danh mục
 , trang sửa danh mục  */
@@ -29,7 +29,15 @@
 tr:hover td{
     color: #ee3500;
 }
-
+.xuat_thongke{
+    font-weight: bold ; 
+    border: 1px solid #038018;
+    color: #038018;
+}
+.xuat_thongke:hover{
+    color: white;
+    background-color: #038018;
+}
 .themmoi{
     font-weight: bold; 
     border: 1px solid #038018;
@@ -105,4 +113,5 @@ tr:hover td{
 .tieude-bang{
     color: white !important;
     font-weight: bold !important;
+    text-align: center;
 }
