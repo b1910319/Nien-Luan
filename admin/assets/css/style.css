@@ -23,12 +23,20 @@
 .don-hang-moi > a{
     font-weight: bold;
 }
-
+.chitiet_donhang{
+    font-weight: bold; 
+    border: 1px solid #038018;
+    color: #038018;
+}
+.chitiet_donhang:hover{
+    color: white;
+    background-color: #038018;
+}
 /*  */
 
-tr:hover td{
+/* tr:hover td{
     color: #ee3500;
-}
+} */
 .xuat_thongke{
     font-weight: bold ; 
     border: 1px solid #038018;

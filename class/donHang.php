@@ -1,5 +1,4 @@
 <?php
-
 use Carbon\Carbon;
 
     $filepath = realpath(dirname(__FILE__));
@@ -19,31 +18,6 @@ use Carbon\Carbon;
             $this ->format = new fomat();
             $this->sanPham= new sanPham();
         }
-        // public function insert_donhang($ma_khachhang,$gichu_khachhang){
-        //     $date_now = Carbon::now('Asia/Ho_Chi_Minh');
-        //     $gichu_khachhang = mysqli_real_escape_string($this->database->link, $gichu_khachhang);
-        //     $queryGH = "SELECT * FROM `giohang` WHERE 	ma_khachhang = '$ma_khachhang' ORDER BY ma_giohang desc";
-        //     $lay_donhang = $this ->database->select($queryGH);
-        //     if ($lay_donhang){
-        //         while ($resultDH = $lay_donhang->fetch_assoc()){
-        //             $ma_sanpham = $resultDH['ma_sanpham'];
-        //             $soluong_sanpham = $resultDH['soluong_sanpham'];
-        //             $ma_giohang = $resultDH['ma_giohang'];
-        //             $ma_khach = $ma_khachhang;
-        //             $queryDH = "INSERT INTO `donhang`( `ma_sanpham`, `ma_nguoidung`, 
-        //             `soluong_sanpham`, `ghichu_nguoidung`, `tinhtrang_donhang`,`ngay_dathang`) VALUES 
-        //             ('$ma_sanpham','$ma_khach','$soluong_sanpham','$gichu_khachhang', '0','$date_now')";
-        //             $inserDH = $this->database->insert($queryDH);
-        //             // Session::set('donhang', true);
-        //             // Session::set('donhang_magiohang',$ma_giohang);
-        //             $query_xoaDH = "DELETE FROM `giohang` WHERE ma_giohang = '$ma_giohang' ";
-        //             $result_xoaDH = $this ->database->delete($query_xoaDH);
-        //             unset($_SESSION['giohang_masanpham']);
-        //         }
-        //     }
-            
-        // }
-
         public function insert_donhang($ma_khachhang,$gichu_khachhang){
             $date_now = Carbon::now('Asia/Ho_Chi_Minh');
             $ngay_thongke = $date_now->toDateString();
@@ -83,18 +57,16 @@ use Carbon\Carbon;
             }
             
         }
-        public function lay_donhang($ma_khachhang){
-            // $sessionid = session_id();
-            // $sessionid = mysqli_real_escape_string($this->database->link, $sessionid);
-            $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' ORDER BY ma_donhang desc";
-            $resultDH = $this ->database->select($queryDH);
-            return $resultDH;
-        }
-        public function show_donhang(){
-            $query = "SELECT * FROM `donhang` ORDER BY ma_donhang desc";
-            $result = $this->database->select($query);
-            return $result;
-        }
+        // public function lay_donhang($ma_khachhang){
+        //     $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' ORDER BY ma_donhang desc";
+        //     $resultDH = $this ->database->select($queryDH);
+        //     return $resultDH;
+        // }
+        // public function show_donhang(){
+        //     $query = "SELECT * FROM `donhang` ORDER BY ma_donhang desc";
+        //     $result = $this->database->select($query);
+        //     return $result;
+        // }
         public function doiTinhTrangDH($maDH, $thoigian){
             $maDH = mysqli_real_escape_string($this->database->link, $maDH);
             $thoigian = mysqli_real_escape_string($this->database->link, $thoigian);
@@ -138,5 +110,32 @@ use Carbon\Carbon;
             $result = $this->database->delete($query);
             return $result;
         }
+        // 
+        public function lay_donhang_thoigian($ma_khachhang){
+            $queryDH = "SELECT DISTINCT ngay_dathang FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' order by ngay_dathang desc";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
+        public function dem_donhang_thoigian($ma_khachhang, $ngay_dathang){
+            $queryDH = "SELECT ngay_dathang, COUNT(ma_sanpham) as tongsp_ngaydathang FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' AND ngay_dathang = '$ngay_dathang'";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
+        public function lay_chitiet_donhang($ma_khachhang, $ngay_dathang){
+            $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' AND ngay_dathang = '$ngay_dathang' ORDER BY ma_donhang desc";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
+        public function show_donhang_thoigian(){
+            $queryDH = "SELECT DISTINCT ngay_dathang, ma_nguoidung, tinhtrang_donhang FROM `donhang` order by ngay_dathang desc";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
+        public function show_chitiet_donhang($ma_khachhang, $ngay_dathang){
+            $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' AND ngay_dathang = '$ngay_dathang' ORDER BY ma_donhang desc";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
+        // 
     }
 ?>

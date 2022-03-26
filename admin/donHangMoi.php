@@ -32,123 +32,107 @@
             </ol>
         </nav>
         <div class="danh-sach-san-pham-body">
-            <div class="row">
-                <div class="alert  col" role="alert" style="margin-right: 30px; background-color: #ee3500; color: white; font-weight: bold">
-                    Đơn hàng đang chờ xử lý:
-                    <?php
-                        $dem_donhang_xuly = $donHang->dem_donhang_xuly();
-                        if($dem_donhang_xuly){
-                            $resultDHXuLy = $dem_donhang_xuly->fetch_assoc();
-                            echo $resultDHXuLy['tong_donhang_xuly'];
-                        }
-                    ?>
-                </div>
-                <div class="alert col" role="alert" style="margin-right: 30px; background-color: #121e96; color: white; font-weight: bold">
-                    Đơn hàng đang vận chuyển: 
-                    <?php
-                        $dem_donhang_vanchuyen = $donHang->dem_donhang_vanchuyen();
-                        if($dem_donhang_vanchuyen){
-                            $resultDHVanChuyen = $dem_donhang_vanchuyen->fetch_assoc();
-                            echo $resultDHVanChuyen['tong_donhang_vanchuyen'];
-                        }
-                    ?>
-                </div>
-                <div class="alert col" role="alert" style="background-color: #038018; color: white; font-weight: bold">
-                    Đơn hàng đã nhận:
-                    <?php
-                        $dem_donhang_danhan = $donHang->dem_donhang_danhan();
-                        if($dem_donhang_danhan){
-                            $resultDHDaNhan = $dem_donhang_danhan->fetch_assoc();
-                            echo $resultDHDaNhan['tong_donhang_danhan'];
-                        }
-                    ?>
+            <div class="container">
+                <div class="row">
+                    <div class="alert  col" role="alert" style="margin-right: 30px; background-color: #ee3500; color: white; font-weight: bold">
+                        Đơn hàng đang chờ xử lý:
+                        <?php
+                            $dem_donhang_xuly = $donHang->dem_donhang_xuly();
+                            if($dem_donhang_xuly){
+                                $resultDHXuLy = $dem_donhang_xuly->fetch_assoc();
+                                echo $resultDHXuLy['tong_donhang_xuly'];
+                            }
+                        ?>
+                    </div>
+                    <div class="alert col" role="alert" style="margin-right: 30px; background-color: #121e96; color: white; font-weight: bold">
+                        Đơn hàng đang vận chuyển: 
+                        <?php
+                            $dem_donhang_vanchuyen = $donHang->dem_donhang_vanchuyen();
+                            if($dem_donhang_vanchuyen){
+                                $resultDHVanChuyen = $dem_donhang_vanchuyen->fetch_assoc();
+                                echo $resultDHVanChuyen['tong_donhang_vanchuyen'];
+                            }
+                        ?>
+                    </div>
+                    <div class="alert col" role="alert" style="background-color: #038018; color: white; font-weight: bold">
+                        Đơn hàng đã nhận:
+                        <?php
+                            $dem_donhang_danhan = $donHang->dem_donhang_danhan();
+                            if($dem_donhang_danhan){
+                                $resultDHDaNhan = $dem_donhang_danhan->fetch_assoc();
+                                echo $resultDHDaNhan['tong_donhang_danhan'];
+                            }
+                        ?>
+                    </div>
                 </div>
             </div>
             <div class=" table-responsive ">
-                <?php
+                <!-- <?php
                     if (isset($_GET['maDH'])){
                         $maDH = $_GET['maDH'];
                         $thoigian = $_GET['thoigian'];
                         $doiTinhTrangDH = $donHang->doiTinhTrangDH($maDH, $thoigian);
                     }
-                ?>
+                ?> -->
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
                         <tr >
                             <th scope="col" class="tieude-bang">STT</th>
                             <th scope="col" class="tieude-bang">Ngày đặt</th>
-                            <th scope="col" class="tieude-bang">Tên sản phẩm</th>
-                            <th scope="col" class="tieude-bang">Gía</th>
-                            <th scope="col" class="tieude-bang">Ghi chú</th>
-                            <th scope="col" class="tieude-bang">Số lượng</th>
-                            <th scope="col" class="tieude-bang">Thành tiền</th>
                             <th scope="col" class="tieude-bang">Tên khách hàng</th>
                             <th scope="col" class="tieude-bang">Số điện thoại</th>
                             <th scope="col" class="tieude-bang">Địa chỉ</th>
-                            <th scope="col" class="tieude-bang">Quản lý</th>
+                            <th scope="col" class="tieude-bang">Chi tiết</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            $laydonhang = $donHang->show_donhang();
+                            $laydonhang = $donHang->show_donhang_thoigian();
                             $i=0;
                             if ($laydonhang){
                                 while($resultDH = $laydonhang->fetch_assoc()){
-                                    $laysanpham = $sanPham->laySanPham($resultDH['ma_sanpham']);
-                                    if ($laysanpham){
-                                        $resultSP = $laysanpham->fetch_assoc();
-                                    }
                                     $laynguoidung = $nguoiDung->show_thongTin($resultDH['ma_nguoidung']);
                                     if ($laynguoidung){
                                         $resultND = $laynguoidung->fetch_assoc();
                                     }
                                     $i ++ ;
-                                    ?>
-                                        <tr>
-                                            <td><?php echo $i ?></td>
-                                            <td><?php echo $resultDH['ngay_dathang'] ?></td>
-                                            <td><?php echo $resultSP['ten_sanpham'] ?></td>
-                                            <td><?php echo number_format($resultSP['gia_sanpham'], 0, ',', '.') . ' <sup>đ</sup>' ?></td>
-                                            <td><?php echo $resultDH['ghichu_nguoidung'] ?></td>
-                                            <td><?php echo $resultDH['soluong_sanpham'] ?></td>
-                                            <?php $thanhtien = $resultDH['soluong_sanpham']*$resultSP['gia_sanpham'] ?>
-                                            <td><?php echo number_format($thanhtien, 0, ',', '.') . ' <sup>đ</sup>' ?></td>
-                                            <td><?php echo $resultND['hoten_nguoidung'] ?></td>
-                                            <td><?php echo $resultND['sdt_nguoidung'] ?></td>
-                                            <td><?php echo $resultND['diachi_nguoidung'] ?></td>
-                                            <td class="don-hang-moi">
-                                                <?php
-                                                    if ($resultDH['tinhtrang_donhang'] == 0 ){
-                                                        ?>
-                                                            <a href="?maDH=<?php echo $resultDH['ma_donhang'] ?>&thoigian=<?php echo $resultDH['ngay_dathang'] ?>">
-                                                                <button type="button" class="btn dang-xu-ly">
-                                                                    Đang chờ xử lý
-                                                                </button>
-                                                            </a>
-                                                        <?php
-                                                    }
-                                                    elseif ($resultDH['tinhtrang_donhang'] == 1 ){
-                                                        ?>
-                                                            <span>
-                                                                <button type="button" class="btn dang-van-chuyen">
-                                                                    Đang vận chuyển
-                                                                </button>
-                                                            </span>
-                                                        <?php
-                                                    }
-                                                    else{
-                                                        ?>
-                                                            <span >
-                                                                <button type="button" class="btn da-nhan-hang">
-                                                                    Đã nhận hàng
-                                                                </button>
-                                                            </span>
-                                                        <?php
-                                                    }
-                                                ?>
-                                            </td>
-                                        </tr>
-                                    <?php
+                                    if($resultDH['tinhtrang_donhang'] == '0'){
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $i ?></td>
+                                                <td style="color: #ee3500; font-weight: bold; font-size: 18px;"><?php echo $resultDH['ngay_dathang'] ?></td>
+                                                <td><?php echo $resultND['hoten_nguoidung'] ?></td>
+                                                <td><?php echo $resultND['sdt_nguoidung'] ?></td>
+                                                <td><?php echo $resultND['diachi_nguoidung'] ?></td>
+                                                <td>
+                                                    <a href="chiTietDonHangMoi.php?ma_nguoidung=<?php echo $resultDH['ma_nguoidung'] ?>&&ngay_dathang=<?php echo $resultDH['ngay_dathang'] ?>">
+                                                        <button type="button" class="btn chitiet_donhang" >
+                                                            <i class="fas fa-info-circle"></i> 
+                                                            Chi tiết đơn hàng
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                    } else{
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $i ?></td>
+                                                <td><?php echo $resultDH['ngay_dathang'] ?></td>
+                                                <td><?php echo $resultND['hoten_nguoidung'] ?></td>
+                                                <td><?php echo $resultND['sdt_nguoidung'] ?></td>
+                                                <td><?php echo $resultND['diachi_nguoidung'] ?></td>
+                                                <td>
+                                                    <a href="chiTietDonHangMoi.php?ma_nguoidung=<?php echo $resultDH['ma_nguoidung'] ?>&&ngay_dathang=<?php echo $resultDH['ngay_dathang'] ?>">
+                                                        <button type="button" class="btn chitiet_donhang" >
+                                                            <i class="fas fa-info-circle"></i> 
+                                                            Chi tiết đơn hàng
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                    }
                                 }
                             }
                         ?>
