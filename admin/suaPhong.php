@@ -25,8 +25,10 @@
     <?php include_once ("include/rightBar.php") ?>
     <div class="container sua-phong" style="margin-top: 100px;">
         <div class="alert alert-secondary row" role="alert">
-            <a href="danhSachPhong.php" class="col-2" style="font-size: 20px; color: #121e96; font-weight: bold;">
-                <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại
+            <a href="danhSachPhong.php" class="col-2 mt-2" >
+                <button type="button" class="btn btn-outline-success" style="font-weight: bold;">
+                    <i class="fas fa-angle-double-left"></i> Trở lại
+                </button>
             </a>
             <h1 class="col-10">SỬA THÔNG TIN PHÒNG</h1>
         </div>

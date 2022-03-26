@@ -112,7 +112,7 @@ use Carbon\Carbon;
         }
         // 
         public function lay_donhang_thoigian($ma_khachhang){
-            $queryDH = "SELECT DISTINCT ngay_dathang FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' order by ngay_dathang desc";
+            $queryDH = "SELECT DISTINCT ngay_dathang, tinhtrang_donhang FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' order by ngay_dathang desc";
             $resultDH = $this ->database->select($queryDH);
             return $resultDH;
         }

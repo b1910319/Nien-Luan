@@ -32,21 +32,39 @@
                                         $dem_donhang_thoigian = $donHang->dem_donhang_thoigian($ma_khachhang, $resultDH['ngay_dathang']);
                                         if($dem_donhang_thoigian){
                                             $resultDemDH = $dem_donhang_thoigian->fetch_assoc();
-                                            ?>
-                                                <tr class="table-giohang-body">
-                                                    <th><?php echo $i; ?></th>
-                                                    <td scope="row"><?php echo $resultDH['ngay_dathang'] ?></td>
-                                                    <td scope="row"><?php echo $resultDemDH['tongsp_ngaydathang'] ?></td>
-                                                    <td scope="row">
-                                                        <a href="chiTietLichSuDonHang.php?ma_khachhang=<?php echo $ma_khachhang ?>&&ngay_dathang=<?php echo $resultDH['ngay_dathang'] ?>">
-                                                            <button type="button" class="btn chitiet_donhang" >
-                                                                <i class="fas fa-info-circle"></i> 
-                                                                Chi tiết đơn hàng
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            <?php
+                                            if($resultDH['tinhtrang_donhang'] == '1'){
+                                                ?>
+                                                    <tr class="table-giohang-body">
+                                                        <th><?php echo $i; ?></th>
+                                                        <td scope="row" style="color: #038018; font-weight: bold; font-size: 18px;"><?php echo $resultDH['ngay_dathang'] ?></td>
+                                                        <td scope="row"><?php echo $resultDemDH['tongsp_ngaydathang'] ?></td>
+                                                        <td scope="row">
+                                                            <a href="chiTietLichSuDonHang.php?ma_khachhang=<?php echo $ma_khachhang ?>&&ngay_dathang=<?php echo $resultDH['ngay_dathang'] ?>">
+                                                                <button type="button" class="btn chitiet_donhang" >
+                                                                    <i class="fas fa-info-circle"></i> 
+                                                                    Chi tiết đơn hàng
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?php
+                                            }else{
+                                                ?>
+                                                    <tr class="table-giohang-body">
+                                                        <th><?php echo $i; ?></th>
+                                                        <td scope="row"><?php echo $resultDH['ngay_dathang'] ?></td>
+                                                        <td scope="row"><?php echo $resultDemDH['tongsp_ngaydathang'] ?></td>
+                                                        <td scope="row">
+                                                            <a href="chiTietLichSuDonHang.php?ma_khachhang=<?php echo $ma_khachhang ?>&&ngay_dathang=<?php echo $resultDH['ngay_dathang'] ?>">
+                                                                <button type="button" class="btn chitiet_donhang" >
+                                                                    <i class="fas fa-info-circle"></i> 
+                                                                    Chi tiết đơn hàng
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?php
+                                            }
                                         }
                                         
                                     }

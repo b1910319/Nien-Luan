@@ -8,11 +8,14 @@
         <?php include("include/header.php") ?>
         <br><br><br>
         <div class="container">
-            <div class="row">
-                <a href="lichSuDonHang.php" class="col-1" style="font-size: 20px; color: #121e96; font-weight: bold;">
-                    <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại
+            <div class="alert alert-secondary row" role="alert">
+                <a href="lichSuDonHang.php" class="col-2 mt-2" >
+                    <!-- <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại -->
+                    <button type="button" class="btn btn-outline-success" style="font-weight: bold;">
+                        <i class="fas fa-angle-double-left"></i> Trở lại
+                    </button>
                 </a>
-                <h1 class="col-11 text-center">CHI TIẾT LỊCH SỬ ĐƠN HÀNG</h1>
+                <h1 class="col-10 text-center">CHI TIẾT LỊCH SỬ ĐƠN HÀNG</h1>
             </div>
         </div>
         <div class="container">
