@@ -34,7 +34,7 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col" class="tieude-bang">STT</th>
-                            <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                            <th scope="col" class="tieude-bang">User khách hàng</th>
                             <th scope="col" class="tieude-bang">Sđt khách hàng</th>
                             <th scope="col" class="tieude-bang">Tên sản phẩm</th>
                             <th scope="col" class="tieude-bang">Số lượng</th>
@@ -58,7 +58,7 @@
                                     ?>
                                         <tr>
                                             <td><?php echo $i ?></td>
-                                            <td><?php echo $resultND['hoten_nguoidung'] ?></td>
+                                            <td><?php echo $resultND['user_nguoidung'] ?></td>
                                             <td><?php echo $resultND['sdt_nguoidung'] ?> </td>
                                             <td><?php echo $resultSP['ten_sanpham'] ?></td>
                                             <td><?php echo $resultGH['soluong_sanpham'] ?></td>

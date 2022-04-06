@@ -1,12 +1,12 @@
 <?php
-include_once("class/nguoiDung.php");
-$nguoiDung = new nguoiDung();
-include_once("class/tinh.php");
-$tinh = new tinh();
-include_once("class/huyen.php");
-$huyen = new huyen();
-include_once("class/xa.php");
-$xa = new xa();
+    include_once("class/nguoiDung.php");
+    $nguoiDung = new nguoiDung();
+    include_once("class/tinh.php");
+    $tinh = new tinh();
+    include_once("class/huyen.php");
+    $huyen = new huyen();
+    include_once("class/xa.php");
+    $xa = new xa();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,9 +57,9 @@ $xa = new xa();
     <!--  -->
 </head>
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['dangky'])) {
-    $inset_nguoidung = $nguoiDung->insert_nguoidung($_POST);
-}
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['dangky'])) {
+        $inset_nguoidung = $nguoiDung->insert_nguoidung($_POST);
+    }
 ?>
 
 <body>
@@ -67,9 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['dangky'])) {
         <?php include("include/header.php") ?>
         <!--  -->
         <!-- đăng ký  -->
-        <br><br><br>
+        <br>
         <div class="container">
-            <div class="login-box" style="margin-top: 25%;">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="login-box" >
                 <h2>ĐĂNG KÝ</h2>
                 <form action="" method="POST">
                     <?php

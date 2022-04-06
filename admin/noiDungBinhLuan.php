@@ -36,7 +36,7 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col" class="tieude-bang">STT</th>
-                            <th scope="col" class="tieude-bang">Tên khách hàng</th>
+                            <th scope="col" class="tieude-bang">User khách hàng</th>
                             <th scope="col" class="tieude-bang">Nội dung bình luận</th>
                             <th scope="col" class="tieude-bang">Tên sản phẩm</th>
                             <th scope="col" class="tieude-bang">Thời gian</th>
@@ -63,7 +63,7 @@
                                     ?>
                                         <tr>
                                             <th scope="row"><?php echo $i ?></th>
-                                            <td><?php echo $resultND['hoten_nguoidung'] ?></td>
+                                            <td><?php echo $resultND['user_nguoidung'] ?></td>
                                             <td><?php echo $resultBL['noidung_binhluan'] ?></td>
                                             <td ><?php echo $resultSP['ten_sanpham'] ?></td>
                                             <td><?php echo $resultBL['thoigian_binhluan'] ?></td>

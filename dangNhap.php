@@ -17,9 +17,10 @@
         ?>
         <!--  -->
         <!-- đăng nhập  -->
-        <br><br><br>
+        <br>
         <div class="container">
-            <div class="login-box" style="margin-top: 15%;">
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="login-box" >
                 <h2>ĐĂNG NHẬP</h2>
                 <?php
                     if (isset($login_nguoidung)){

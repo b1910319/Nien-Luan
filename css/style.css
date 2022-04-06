@@ -177,7 +177,6 @@ ul {
 /*  */
 
 /* ----------------------------------------------------------------banner  */
-
 .hinh-slide{
     overflow:hidden;
     width: 100%;
@@ -186,7 +185,7 @@ ul {
     display: inline;
 }
 .hinh-slide-right{
-    width: 96%;
+    width: 100%;
     margin-left: 10px;
 }
 
@@ -389,7 +388,7 @@ footer{
 }
 .chitiet-muangay button:hover{
     background-color: white;
-    color: black;
+    color: #eb3007;
     border: 1px solid #eb3007;
 }
 .chinhsach-muahang{

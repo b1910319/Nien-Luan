@@ -113,20 +113,6 @@
                     <i class="mdi mdi-menu"></i>
                 </button>
             </li>
-            <!-- <li class="d-none d-lg-block">
-                <form class="app-search">
-                    <div class="app-search-box">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <div class="input-group-append">
-                                <button class="btn" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </li> -->
         </ul>
     </div>
     <div class="left-side-menu">
@@ -156,19 +142,6 @@
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="themDanhMuc.php">Thêm danh mục</a></li>
                             <li><a href="danhSachDanhMuc.php">Danh sách danh mục</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript: void(0);" class="waves-effect">
-                        <i class="fas fa-couch" style="font-size: 15px;"></i>
-                            <span> Sản Phẩm </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="themSanPham.php">Thêm sản phẩm</a></li>
-                            <li><a href="danhSachSanPham.php">Danh sách sản phẩm</a></li>
-                            <li><a href="themHinhAnhSanPham.php">Thêm hình ảnh</a></li>
-                            <li><a href="danhSachHinhAnh.php">Danh sách hình ảnh</a></li>
                         </ul>
                     </li>
                     <li >
@@ -206,7 +179,6 @@
                             <li><a href="danhSachXuatXu.php">Danh sách xuất xứ</a></li>
                         </ul>
                     </li>
-
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-ios-list"></i>
@@ -218,7 +190,6 @@
                             <li><a href="danhSachBoSuuTap.php">Danh sách bộ sưu tập</a></li>
                         </ul>
                     </li>
-
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                             <i class="ion-md-pie"></i>
@@ -230,7 +201,19 @@
                             <li><a href="danhSachPhong.php">Danh sách phòng</a></li>
                         </ul>
                     </li>
-
+                    <li>
+                        <a href="javascript: void(0);" class="waves-effect">
+                        <i class="fas fa-couch" style="font-size: 15px;"></i>
+                            <span> Sản Phẩm </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="themSanPham.php">Thêm sản phẩm</a></li>
+                            <li><a href="danhSachSanPham.php">Danh sách sản phẩm</a></li>
+                            <li><a href="themHinhAnhSanPham.php">Thêm hình ảnh</a></li>
+                            <li><a href="danhSachHinhAnh.php">Danh sách hình ảnh</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="javascript: void(0);" class="waves-effect">
                         <i class="fas fa-map-marker-alt"></i>
@@ -264,6 +247,16 @@
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="donHangMoi.php">Đơn hàng mới</a></li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="javascript: void(0);" class="waves-effect">
+                            <i class="fas fa-eye"></i>
+                            <span> Lượt Xem </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="danhSachLuotXem.php">Lượt xem của sản phẩm</a></li>
                         </ul>
                     </li>
                     <li>

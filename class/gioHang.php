@@ -25,8 +25,6 @@
                 Session::set('giohang_masanpham', $masp );
         }
         public function lay_donhang($ma_khachhang){
-            // $sessionid = session_id();
-            // $sessionid = mysqli_real_escape_string($this->database->link, $sessionid);
             $queryDH = "SELECT * FROM `giohang` WHERE 	ma_khachhang = '$ma_khachhang' ORDER BY ma_giohang desc";
             $resultDH = $this ->database->select($queryDH);
             return $resultDH;
@@ -62,18 +60,13 @@
             $resultDH = $this ->database->select($queryDH);
             return $resultDH;
         }
-        // public function xoa_giohang_dangxuat ($sessionid){
-        //     $queryDH = "DELETE FROM `giohang` WHERE ma_session = '$sessionid' ";
-        //     $resultDH = $this ->database->delete($queryDH);
-        //     return $resultDH;
-        // }
         public function show_giohang(){
             $query = "SELECT * FROM `giohang` ORDER BY ma_giohang desc";
             $result = $this->database->select($query);
             return $result;
         }
         public function timkiem_giohang($timkiem_giohang){
-            $query = "SELECT * FROM `giohang` join `nguoidung` on giohang.ma_khachhang = nguoidung.ma_nguoidung WHERE hoten_nguoidung LIKE '%".$timkiem_giohang."%' ";
+            $query = "SELECT * FROM `giohang` join `nguoidung` on giohang.ma_khachhang = nguoidung.ma_nguoidung WHERE user_nguoidung LIKE '%".$timkiem_giohang."%' ";
             $result = $this ->database->select($query);
             return $result;
         }

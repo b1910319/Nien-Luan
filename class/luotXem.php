@@ -31,5 +31,10 @@
             $result = $this->database->select($query);
             return $result;
         }
+        public function show_luotxem_full (){
+            $query = "SELECT * FROM `luotxem` ORDER BY so_luotxem DESC";
+            $result = $this->database->select($query);
+            return $result;
+        }
     }
 ?>

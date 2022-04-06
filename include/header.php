@@ -75,11 +75,11 @@
 </head>
 <header>
     <div class="header">
-        <a href=""><img src="img/header/mienphi-giaohang.gif" class="img-fluid"></a>
+        <a href=""><img src="img/header/mienphi-giaohang.gif" class="img-fluid" style="height: 65px;"></a>
     </div>
     <div class="menu1">
         <div class="row ">
-            <div class="col">
+            <div class="col-2">
                 <a href="index.php"><img src="img/header/logo.png" class="img-fluid" style="width: 50%;"></a>
             </div>
             <?php

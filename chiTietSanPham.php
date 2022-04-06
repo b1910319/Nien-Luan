@@ -172,14 +172,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- tóm tắt sản phẩm  -->
-                                        <div class="row mt-4 tomtat-sanpham">
-                                            <ul>
-                                                <span class="spinner-grow text-danger"></span>
-                                                <?php echo $resultSP['tomtat_sanpham'] ?>
-                                            </ul>
-                                        </div>
-                                        <!--  -->
                                     </div>
                                 <?php
                             }
@@ -187,6 +179,7 @@
                     ?>
                 </div>
             </div>
+            <br>
             <div class="mota-sanpham">
                 <?php
                 $gioHang = new gioHang();

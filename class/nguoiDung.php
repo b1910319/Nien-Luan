@@ -68,7 +68,7 @@
                     Session::set('login_ma', $resultlogin['ma_nguoidung']);
                     Session::set('login_ten', $resultlogin['hoten_nguoidung']);
                     Session::set('login_user', $resultlogin['user_nguoidung']);
-                    $alert = '<span style="color: #038018;  font-weight: bold;">Đăng nhập thành công</span>';
+                    $alert = '<a href="index.php"><button style="width: 20%;" type="button" class="btn btn-danger chucnang"><i class="fas fa-home"></i> &nbsp; Trang chủ</button></a>';
                     return $alert;
                 } else{
                     $alert = '<span style="color: #eb3007;  font-weight: bold;">Username hoặc Password sai quy khách vui lòng đặt lại</span>';
@@ -126,6 +126,17 @@
             $query = "SELECT COUNT(ma_nguoidung) as 'tong_nguoidung'  FROM `nguoidung`";
             $result = $this->database->select($query);
             return $result;
+        }
+        public function delete_nguoidung($ma_nguoidung){
+            $query = "DELETE FROM `nguoidung` WHERE ma_nguoidung = '$ma_nguoidung'";
+            $result = $this->database->delete($query);
+            if($result){
+                $alert = '<span style="color: #038018; font-weight: bold;">Người dùng xóa thành công</span>';
+                return $alert;
+            } else{
+                $alert = '<span style="color: #eb3007; font-weight: bold;">Người dùng xóa không thành công</span>';
+                return $alert;
+            }
         }
     }
 ?>

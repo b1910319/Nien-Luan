@@ -6,6 +6,10 @@
     <?php
         include_once("../class/nguoiDung.php");
         $nguoiDung = new nguoiDung();
+        if (isset($_GET['ma_nguoidung']) && $_GET['ma_nguoidung'] != NULL){
+            $ma_nguoidung = $_GET['ma_nguoidung'];
+            $delete_nguoidung = $nguoiDung->delete_nguoidung($ma_nguoidung);
+        }
     ?>
     <div class="container danh-sach-phong" style="margin-top: 100px;">
         <div >
@@ -28,12 +32,12 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col" class="tieude-bang">STT</th>
-                            <th scope="col" class="tieude-bang">Mã khách hàng</th>
                             <th scope="col" class="tieude-bang">Tên khách hàng</th>
                             <th scope="col" class="tieude-bang">Sđt khách hàng</th>
                             <th scope="col" class="tieude-bang">Email khách hàng</th>
                             <th scope="col" class="tieude-bang">User khách hàng</th>
                             <th scope="col" class="tieude-bang">Địa chỉ khách hàng</th>
+                            <th scope="col" class="tieude-bang">Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,12 +50,20 @@
                                     ?>
                                         <tr>
                                             <td><?php echo $i ?></td>
-                                            <td><?php echo $resultND['ma_nguoidung'] ?></td>
                                             <td><?php echo $resultND['hoten_nguoidung']  ?> </td>
                                             <td><?php echo $resultND['sdt_nguoidung']  ?></td>
                                             <td><?php echo $resultND['email_nguoidung'] ?></td>
                                             <td><?php echo $resultND['user_nguoidung'] ?></td>
                                             <td><?php echo $resultND['diachi_nguoidung'] ?></td>
+                                            <td>
+                                                <a href="?ma_nguoidung=<?php echo $resultND['ma_nguoidung'] ?>">
+                                                    <center>
+                                                        <button type="button" class="btn xoa">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    </center>
+                                                </a>
+                                            </td>
                                         </tr>
                                     <?php
                                 }

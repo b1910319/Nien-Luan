@@ -68,7 +68,7 @@
             else{
                 move_uploaded_file($file_temp, $uploaded_image);
                 $query = "UPDATE `hinhanh_sanpham` SET`hinhanh`='$unique_image',`ma_sanpham`='$ten_sanpham' WHERE ma_hinhanh='$ma'";
-                $result = $this->database->insert($query);
+                $result = $this->database->update($query);
                 if($result){
                     $alert = '<span style="color: #038018; font-weight: bold;">Hình ảnh được thêm thành công</span>';
                     header("Location: danhSachHinhAnh.php");

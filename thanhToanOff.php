@@ -193,9 +193,9 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center " colspan="2">
-                                                            <a href="suaThongTinKhachHang.php">
-                                                                <button class="btn btn-primary " style="width: 30%; background-color: #eb3007; border: none; font-weight: bold;">Update</button>
-                                                            </a>
+                                                            <button class="btn btn-primary " style="width: 30%; background-color: #eb3007; border: none; font-weight: bold;">
+                                                                <a href="suaThongTinKhachHang.php" style="color: white;">Update</a>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                 </tbody>

@@ -10,7 +10,6 @@
         <div class="container">
             <div class="alert alert-secondary row" role="alert">
                 <a href="lichSuDonHang.php" class="col-2 mt-2" >
-                    <!-- <i class="fas fa-angle-double-left  mt-4" style="font-size: 25px; color: #121e96; font-weight: bold" ></i> Trở lại -->
                     <button type="button" class="btn btn-outline-success" style="font-weight: bold;">
                         <i class="fas fa-angle-double-left"></i> Trở lại
                     </button>
