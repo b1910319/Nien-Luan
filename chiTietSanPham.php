@@ -440,25 +440,29 @@
             ?>
             <?php
                 $ma_khachhang = Session::get('login_ma');
-                if ($ma_khachhang != NULL){
-                    ?>
-                        <h3 ><strong>Viết nhận xét</strong></h3>
-                        <form action="" method="POST">
-                            <div class="mb-3">
-                                <input type="hidden" class="form-control" id="exampleFormControlInput1" name="ma_sanpham" value="<?php echo $masp ?>">
-                                <input type="hidden" class="form-control" id="exampleFormControlInput1" name="ma_khach" value="<?php echo $ma_khachhang ?>">
-                                <input readonly type="text" class="form-control" id="exampleFormControlInput1" name="ten_khach" value="<?php echo $ten_khachhang ?>">
-                            </div>
-                            <div class="mb-3">
-                                <textarea name="noidung_binhluan" style="resize: none;" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                            </div>
-                            <input type="submit" name="binhluan" class="btn btn-outline-success " style="font-weight: bold;" value="Gửi bình luận">
-                        </form>
-                    <?php
-                }
+                if (isset($_GET['masp']) && $_GET['masp'] != NULL ) {
+                    $masp = $_GET['masp'];
+                    if ($ma_khachhang != NULL){
+                        ?>
+                            <h3 ><strong>Viết nhận xét</strong></h3>
+                            <form action="" method="POST">
+                                <div class="mb-3">
+                                    <input type="hidden" class="form-control" id="exampleFormControlInput1" name="ma_sanpham" value="<?php echo $masp ?>">
+                                    <input type="hidden" class="form-control" id="exampleFormControlInput1" name="ma_khach" value="<?php echo $ma_khachhang ?>">
+                                    <input readonly type="text" class="form-control" id="exampleFormControlInput1" name="ten_khach" value="<?php echo $ten_khachhang ?>">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea name="noidung_binhluan" style="resize: none;" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                </div>
+                                <input type="submit" name="binhluan" class="btn btn-outline-success " style="font-weight: bold;" value="Gửi bình luận">
+                            </form>
+                        <?php
+                    }
                 else{
                     echo " ";
                 }
+                }
+                
             ?>
         </div>
         <br><br>

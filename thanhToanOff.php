@@ -108,7 +108,7 @@
                                 if ($ma_khachhang) {
                                     if ($session_masp == NULL && $laysanpham_tugiohang == false) {
                                         ?>
-                                            <center><img src="img/gio-hang/gio-hang-trong.png" class="img-fluid" style="width: 30%;"></center>
+                                            <center><img src="img/gio-hang/gio-hang-trong.png" class="img-fluid" style="width: 20%;"></center>
                                             <center><h4 style="font-weight: bold; color: #eb3007;">Đơn hàng của quý khách đặt thành công và đang chờ xử lý</h4></center>
                                         <?php
                                     } 
@@ -193,9 +193,9 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center " colspan="2">
-                                                            <button class="btn btn-primary " style="width: 30%; background-color: #eb3007; border: none; font-weight: bold;">
-                                                                <a href="suaThongTinKhachHang.php" style="color: white;">Update</a>
-                                                            </button>
+                                                            <a href="suaThongTinKhachHang.php" class="btn btn-primary " style="width: 30%; background-color: #eb3007; border: none; font-weight: bold;">
+                                                                Update
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -206,7 +206,7 @@
                                 </table>
                                 <div class=" mt-4">
                                     <label for="exampleFormControlTextarea1" class="form-label"></label>
-                                    <textarea name="ghichu_khachhang" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ghi chú của khách hàng"></textarea>
+                                    <textarea name="ghichu_khachhang" style="resize: none;" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ghi chú của khách hàng"></textarea>
                                 </div>
                             </div>
                     <?php

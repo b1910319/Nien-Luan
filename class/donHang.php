@@ -57,11 +57,11 @@ use Carbon\Carbon;
             }
             
         }
-        // public function lay_donhang($ma_khachhang){
-        //     $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' ORDER BY ma_donhang desc";
-        //     $resultDH = $this ->database->select($queryDH);
-        //     return $resultDH;
-        // }
+        public function lay_donhang($ma_khachhang){
+            $queryDH = "SELECT * FROM `donhang` WHERE 	ma_nguoidung = '$ma_khachhang' ORDER BY ma_donhang desc";
+            $resultDH = $this ->database->select($queryDH);
+            return $resultDH;
+        }
         // public function show_donhang(){
         //     $query = "SELECT * FROM `donhang` ORDER BY ma_donhang desc";
         //     $result = $this->database->select($query);
