@@ -129,7 +129,7 @@
                 $trang = $_GET['trangTop'];
             }
             $tung_trang = ($trang-1)*$sanpham_tungtrang;
-            $query = "SELECT * FROM `sanpham` WHERE loai_sanpham = '2' LIMIT $tung_trang, $sanpham_tungtrang";
+            $query = "SELECT * FROM `sanpham` WHERE loai_sanpham = '2' order by ma_sanpham desc LIMIT $tung_trang, $sanpham_tungtrang ";
             $result = $this->database->select($query);
             return $result;
         }
@@ -147,7 +147,7 @@
                 $trang = $_GET['trangNoiBat'];
             }
             $tung_trang = ($trang-1)*$sanpham_tungtrang;
-            $query = "SELECT * FROM `sanpham` WHERE loai_sanpham = '1' LIMIT $tung_trang, $sanpham_tungtrang  ";
+            $query = "SELECT * FROM `sanpham` WHERE loai_sanpham = '1' order by ma_sanpham desc LIMIT $tung_trang, $sanpham_tungtrang  ";
             $result = $this->database->select($query);
             return $result;
         }

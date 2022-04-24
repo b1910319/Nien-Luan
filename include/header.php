@@ -73,7 +73,7 @@
     <!--  -->
     <title>BAYA</title>
 </head>
-<header>
+<header >
     <div class="header">
         <a href=""><img src="img/header/mienphi-giaohang.gif" class="img-fluid" style="height: 65px;"></a>
     </div>
@@ -149,7 +149,7 @@
             </div>
         </div>
     </div>
-    <div class="menu2 row ">
+    <div class="menu2 row  ">
         <nav class="nav">
             <div class="menu-icon">
                 <i class="fas fa-bars" id="open"></i>
