@@ -3,7 +3,6 @@
 ?>
 <?php
     $danhMucSanPham = new danhMucSanPham();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $ten_danhmuc = $_POST['ten_danhmuc'];
         $danhmuc_cha =$_POST['danhmuc_cha'] ;
@@ -12,10 +11,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -23,12 +18,6 @@
         <div class="">
             <h1 class="alert alert-secondary" role="alert">THÊM DANH MỤC SẢN PHẨM</h1>
         </div>
-        <!-- <nav class="duong-dan" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item " aria-current="page"><a href="themDanhMuc.php">Thêm danh mục</a></li>
-            </ol>
-        </nav> -->
         <div class="">
             <a href="danhSachDanhMuc.php">
                 <button type="button" class="btn danhsach" >
@@ -79,7 +68,6 @@
                                 </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>

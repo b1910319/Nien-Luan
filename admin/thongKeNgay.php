@@ -1,4 +1,3 @@
-
 <?php
     include_once("../class/thongKe.php");
     $thongKe = new thongKe();
@@ -57,11 +56,7 @@
                 <?php
                     $thongke_danhthu_ngay = $thongKe->thongke_danhso_ngay();
                     if ($thongke_danhthu_ngay){
-                        // $resultTK = $thongke_danhthu_ngay->fetch_assoc();
                         while ($resultTK = $thongke_danhthu_ngay->fetch_assoc()){
-                            // echo "<pre>";
-                            // print_r($resultTK);
-                            // echo "</pre>";
                             $ngay = $resultTK['ngay_thongke'];
                             $tongtien = $resultTK['tongtien_ngay'];
                                 echo "{ year: '$ngay', value: $tongtien },";
@@ -81,7 +76,6 @@
                 <?php
                     $thongke_sanpham_ngay = $thongKe->thongke_sanpham_ngay();
                     if ($thongke_sanpham_ngay){
-                        // $resultTK = $thongke_danhthu_ngay->fetch_assoc();
                         while ($resultTK = $thongke_sanpham_ngay->fetch_assoc()){
                             $ngay = $resultTK['ngay_thongke'];
                             $tongban = $resultTK['tongban_ngay'];

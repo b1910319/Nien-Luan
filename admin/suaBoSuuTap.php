@@ -18,10 +18,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 </head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

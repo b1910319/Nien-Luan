@@ -3,7 +3,6 @@
 ?>
 <?php
     $xuatxu = new xuatXu();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $ten_xuatxu = $_POST['xuatxu'];
         $insert_xuatxu = $xuatxu->insert_xuatxu($ten_xuatxu);
@@ -11,7 +10,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
@@ -51,7 +49,6 @@
                                 </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>

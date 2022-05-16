@@ -8,15 +8,12 @@
 ?>
 <?php
     $sanPham = new sanPham();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themsanpham'])){
         $inset_sanpham = $sanPham->insert_sanpham($_POST);
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
@@ -84,7 +81,6 @@
                                 <textarea name="mota_sanpham" id="" cols="60" rows="10" placeholder="Mô tả sản phẩm"></textarea>
                             </td>
                         </tr>
-
                         <tr>
                             <th scope="row">Danh mục sản phẩm: </th>
                             <td>
@@ -206,7 +202,6 @@
     </div>
     <!-- trình soạn thảo  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script> -->
     <script src="//cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('mota_sanpham');

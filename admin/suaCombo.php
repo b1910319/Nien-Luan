@@ -15,14 +15,11 @@
         $danhmuc_combo = $_POST['danhmuc_combo'];
         $update_combo = $combo->update_combo($ten_combo, $tomtat_combo, $ma,$danhmuc_combo);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 </head>
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
@@ -63,7 +60,6 @@
                                             </tr>
                                             <!-- trình soạn thảo  -->
                                             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                                            <!-- <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script> -->
                                             <script src="//cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
                                             <script>
                                                 CKEDITOR.replace('tomtat_combo');

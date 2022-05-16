@@ -4,7 +4,6 @@
 ?>
 <?php
     $hinhAnhCombo = new hinhAnhCombo();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['them_hinhanh_combo'])){
         $ten_combo = $_POST['ten_combo'];
         $inset_hinhanh_combo = $hinhAnhCombo->insert_hinhanh_combo($ten_combo, $_FILES);
@@ -12,10 +11,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>

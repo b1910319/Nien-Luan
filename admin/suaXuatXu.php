@@ -12,14 +12,9 @@
         $ten_xuatxu = $_POST['xuatxu'];
         $update_xuatxu = $xuatxu->update_xuatxu($ten_xuatxu, $ma);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

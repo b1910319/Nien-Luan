@@ -1,4 +1,3 @@
-
 <?php
     include_once("../class/thongKe.php");
     $thongKe = new thongKe();
@@ -12,7 +11,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-
 </head>
 <body>
     <?php include_once("include/header.php") ?>
@@ -56,11 +54,7 @@
                 <?php
                     $thongke_danhthu_nam = $thongKe->thongke_danhso_nam();
                     if ($thongke_danhthu_nam){
-                        // $resultTK = $thongke_danhthu_ngay->fetch_assoc();
                         while ($resultTK = $thongke_danhthu_nam->fetch_assoc()){
-                            // echo "<pre>";
-                            // print_r($resultTK);
-                            // echo "</pre>";
                             $nam = $resultTK['nam_thongke'];
                             $tongtien = $resultTK['tongtien_nam'];
                                 echo "{ year: '$nam', value: $tongtien },";
@@ -80,13 +74,8 @@
                 <?php
                     $thongke_sanpham_nam = $thongKe->thongke_sanpham_nam();
                     if ($thongke_sanpham_nam){
-                        // $resultTK = $thongke_danhthu_ngay->fetch_assoc();
                         while ($resultTK = $thongke_sanpham_nam->fetch_assoc()){
-                            // echo "<pre>";
-                            // print_r($resultTK);
-                            // echo "</pre>";
                             $nam = $resultTK['nam_thongke'];
-                            // $tenSP = $resultSP['ten_sanpham'];
                             $tongban = $resultTK['tongban_nam'];
                             echo "{ year: '$nam', value: $tongban },";
                         }

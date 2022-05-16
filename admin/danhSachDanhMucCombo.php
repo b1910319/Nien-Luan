@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -86,7 +85,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 
 </html>

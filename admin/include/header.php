@@ -8,12 +8,8 @@
     <meta content="Responsive bootstrap 4 admin template" name="description">
     <meta content="Coderthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- logo icon -->
     <link rel="shortcut icon" href="assets\images\favicon.ico">
-    <!--  -->
-    <!-- Plugins css-->
     <link href="assets\libs\sweetalert2\sweetalert2.min.css" rel="stylesheet" type="text/css">
-    <!-- App css -->
     <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
     <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
     <link href="assets\css\app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet">
@@ -91,18 +87,15 @@
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                    <!-- item-->
                     <a href="hoSoAdmin.php" class="dropdown-item notify-item">
                         <i class="mdi mdi-account-outline"></i>
                         <span>Hồ sơ</span>
                     </a>
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="mdi mdi-settings-outline"></i>
                         <span>Cài đặt</span>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <!-- item-->
                 </div>
             </li>
             <!--  -->
@@ -281,9 +274,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- End Sidebar -->
             <div class="clearfix"></div>
         </div>
-
     </div>
 </div>

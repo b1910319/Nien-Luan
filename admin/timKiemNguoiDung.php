@@ -19,7 +19,7 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <div class="">
+                <div class="col-8">
                     <a href="danhSachNguoiDung.php">
                         <button type="button" class="btn danhsach" >
                             <i class="fas fa-outdent"></i> 
@@ -50,6 +50,7 @@
                                         <th scope="col" class="tieude-bang">Email khách hàng</th>
                                         <th scope="col" class="tieude-bang">User khách hàng</th>
                                         <th scope="col" class="tieude-bang">Địa chỉ khách hàng</th>
+                                        <th scope="col" class="tieude-bang">Xóa</th>
                                     </tr>
                                 </thead>
                             <?php
@@ -75,6 +76,15 @@
                                             <td><?php echo $resultND['email_nguoidung'] ?></td>
                                             <td><?php echo $resultND['user_nguoidung'] ?></td>
                                             <td><?php echo $resultND['diachi_nguoidung'] ?></td>
+                                            <td>
+                                                <a href="danhSachNguoiDung.php?ma_nguoidung=<?php echo $resultND['ma_nguoidung'] ?>">
+                                                    <center>
+                                                        <button type="button" class="btn xoa">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    </center>
+                                                </a>
+                                            </td>
                                         </tr>
                                     <?php
                                 }

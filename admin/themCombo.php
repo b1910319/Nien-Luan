@@ -14,10 +14,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -35,11 +31,6 @@
         </div>
         <div class="them-danh-muc-body">
             <form action="themCombo.php" method="POST">
-                <?php
-                    // if (isset($inset_danhmuc)){
-                    //     echo $inset_danhmuc;
-                    // }
-                ?>
                 <table class="table">
                     <tbody>
                         <tr>
@@ -58,8 +49,8 @@
                             <th scope="row">Danh mục combo: </th>
                             <td>
                                 <select class="custom-select" id="gender2"  name="danhmuc_combo">
-                                <option selected>Choose...</option>
-                                <?php
+                                    <option selected>Choose...</option>
+                                    <?php
                                         $list_danhmuc_combo = $danhMucCombo->show_danhmuc_combo();
                                         if ($list_danhmuc_combo){
                                             while($result = $list_danhmuc_combo->fetch_assoc()){
@@ -68,7 +59,7 @@
                                             <?php
                                             }
                                         }
-                                ?>
+                                    ?>
                                 </select>
                             </td>
                         </tr>
@@ -81,7 +72,6 @@
                                 </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>
@@ -89,7 +79,6 @@
     </div>
                                             <!-- trình soạn thảo  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script> -->
     <script src="//cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('tomtat_combo');

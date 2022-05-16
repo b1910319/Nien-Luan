@@ -14,14 +14,11 @@
         $danhmuc_cha =$_POST['danhmuc_cha'] ;
         $update_danhmuc = $danhMucSanPham->update_danhmuc($ten_danhmuc, $danhmuc_cha, $ma);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 </head>
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>

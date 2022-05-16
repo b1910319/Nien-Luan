@@ -1,10 +1,8 @@
 <?php
     include_once("../class/adminLogin.php");
-
 ?>
 <?php
     $adminLogin = new adminLogin ();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $userAdmin = $_POST['userAdmin'];
         $passAdmin = md5($_POST['passAdmin']) ;
@@ -13,7 +11,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +18,6 @@
     <link rel="stylesheet" href="assets/css/styleDangNhapAdmin.css">
     <title>Đăng nhập Admin</title>
 </head>
-
 <body>
     <!-- form đăng nhập của admin  -->
     <div class="container">

@@ -18,10 +18,6 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <!-- <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="danhSachHinhAnh.php">Danh sách hình ảnh</a>
-                </li> -->
                 <div class="col">
                     <a href="themHinhAnhSanPham.php">
                         <button type="button" class="btn themmoi" >
@@ -96,7 +92,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 
 </html>

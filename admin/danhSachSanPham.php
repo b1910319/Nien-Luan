@@ -23,10 +23,6 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <!-- <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="danhSachSanPham.php">Danh sách sản phẩm</a>
-                </li> -->
                 <div class="col">
                     <a href="themSanPham.php">
                         <button type="button" class="btn themmoi" >
@@ -41,7 +37,6 @@
                         <button class="btn btn-outline-success search" type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
-
             </ol>
         </nav>
         <div class="danh-sach-san-pham-body">
@@ -58,9 +53,6 @@
                             <th scope="col" class="tieude-bang">Tên sản phẩm</th>
                             <th scope="col" class="tieude-bang">Gía</th>
                             <th scope="col" class="tieude-bang">Tổng số lượng</th>
-                            <!-- <th scope="col">Vật liệu</th> -->
-                            <!-- <th scope="col">Kích thước</th> -->
-                            <!-- <th scope="col">Màu sắc</th> -->
                             <th scope="col" class="tieude-bang">Combo</th>
                             <th scope="col" class="tieude-bang">Danh mục</th>
                             <th scope="col" class="tieude-bang">Xuất xứ</th>
@@ -83,44 +75,36 @@
                                     if($ten_danhmuc){
                                         $resultDM=$ten_danhmuc->fetch_assoc();
                                     }
-                                    // 
                                     // lấy tên xuất xứ của sản phẩm
                                     $xuatxu = new xuatXu();
                                     $ten_xuatxu = $xuatxu->layXuatXu($result['ma_xuatxu']);
                                     if($ten_xuatxu){
                                         $resultXX=$ten_xuatxu->fetch_assoc();
                                     }
-                                    // 
                                     // lấy tên phòng của sản phẩm
                                     $phong = new phong();
                                     $ten_phong = $phong->layPhong($result['ma_phong']);
                                     if($ten_phong){
                                         $resultP=$ten_phong->fetch_assoc();
                                     }
-                                    // 
                                      // lấy tên bộ sưu tập của sản phẩm
                                     $boSuuTap = new boSuuTap();
                                     $ten_bosuutap = $boSuuTap->layBoSuuTap($result['ma_bosuutap']);
                                     if($ten_bosuutap){
                                         $resultBST=$ten_bosuutap->fetch_assoc();
                                     }
-                                     // 
                                      // lấy tên combo của sản phẩm
                                     $combo = new combo();
                                     $ten_combo = $combo->layCombo($result['ma_combo']);
                                     if($ten_combo){
                                         $resultC=$ten_combo->fetch_assoc();
                                     }
-                                     // 
                                     ?>
                                         <tr>
                                             <th scope="row" style="width: 5%;"><?php echo $i ?></th>
                                             <td style="width: 10%;"><?php echo $result['ten_sanpham'] ?></td>
                                             <td style="width: 10%;"><?php echo number_format($result['gia_sanpham'], 0, ',', '.') . ' <sup>đ</sup>' ?></td>
                                             <td style="width: 5%;"><?php echo $result['tongsoluong_sanpham'] ?></td>
-                                            <!-- <td><?php echo $result['vatlieu_sanpham'] ?></td> -->
-                                            <!-- <td><?php echo $result['kichthuoc_sanpham'] ?></td> -->
-                                            <!-- <td><?php echo $result['mausac_sanpham'] ?></td> -->
                                             <td style="width: 10%;">
                                                 <?php 
                                                 if($result['ma_combo'] == 0){
@@ -165,7 +149,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 
 </html>

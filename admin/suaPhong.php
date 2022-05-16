@@ -12,14 +12,9 @@
         $ten_phong = $_POST['ten_phong'];
         $update_phong = $phong->update_phong($ten_phong, $ma);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

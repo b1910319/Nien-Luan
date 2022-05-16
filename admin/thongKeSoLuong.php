@@ -1,4 +1,3 @@
-
 <?php
     include_once("../class/thongKe.php");
     $thongKe = new thongKe();

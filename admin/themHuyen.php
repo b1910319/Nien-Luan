@@ -5,7 +5,6 @@
 ?>
 <?php
     $tinh = new tinh();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $ten_huyen = $_POST['ten_huyen'];
         $ten_tinh = $_POST['ten_tinh'];
@@ -14,7 +13,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

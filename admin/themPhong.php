@@ -3,7 +3,6 @@
 ?>
 <?php
     $phong = new phong();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $ten_phong = $_POST['ten_phong'];
         $insert_phong = $phong->insert_phong($ten_phong);
@@ -11,7 +10,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

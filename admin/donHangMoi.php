@@ -67,13 +67,6 @@
                 </div>
             </div>
             <div class=" table-responsive ">
-                <!-- <?php
-                    if (isset($_GET['maDH'])){
-                        $maDH = $_GET['maDH'];
-                        $thoigian = $_GET['thoigian'];
-                        $doiTinhTrangDH = $donHang->doiTinhTrangDH($maDH, $thoigian);
-                    }
-                ?> -->
                 <table class="table table-bordered table-hover" style="color: black;">
                     <thead class="thead-dark">
                         <tr >

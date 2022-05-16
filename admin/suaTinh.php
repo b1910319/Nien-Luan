@@ -12,14 +12,11 @@
         $ten_tinh = $_POST['ten_tinh'];
         $update_tinh = $tinh->update_tinh($ten_tinh, $ma);
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 </head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>

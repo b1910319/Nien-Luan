@@ -54,7 +54,7 @@
                             <th scope="col" class="tieude-bang">Ghi chú</th>
                             <th scope="col" class="tieude-bang">Số lượng</th>
                             <th scope="col" class="tieude-bang">Thành tiền</th>
-                            <th scope="col" class="tieude-bang">Quản lý</th>
+                            <th scope="col" class="tieude-bang">Trạng thái</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -146,7 +146,6 @@
                                     }
                                 }
                             ?>
-                            
                         </tr>
                     </tbody>
                 </table>

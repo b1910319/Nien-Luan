@@ -3,7 +3,6 @@
 ?>
 <?php
     $boSuuTap = new boSuuTap();
-// kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $ten_bosuutap = $_POST['ten_bosuutap'];
         $bosuutap_cha =$_POST['bosuutap_cha'] ;
@@ -12,10 +11,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -73,7 +68,6 @@
                                 </button>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
             </form>

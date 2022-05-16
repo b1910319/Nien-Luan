@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -18,10 +17,6 @@
         </div>
         <nav class="duong-dan" aria-label="breadcrumb">
             <ol class="breadcrumb row">
-                <!-- <li class="breadcrumb-item col-2"><a href="index.php">Trang chủ </a></li>
-                <li class="breadcrumb-item col-6 " aria-current="page">
-                    <a href="danhSachDanhMuc.php">Danh sách danh mục</a>
-                </li> -->
                 <div class="col">
                     <a href="themDanhMuc.php">
                         <button type="button" class="btn themmoi" >
@@ -95,7 +90,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 
 </html>

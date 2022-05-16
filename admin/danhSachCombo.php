@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <?php include_once("include/header.php") ?>
     <?php include_once ("include/rightBar.php") ?>
@@ -46,7 +45,6 @@
                         <tr>
                             <th scope="col" class="tieude-bang">STT</th>
                             <th scope="col" class="tieude-bang">Tên combo</th>
-                            <!-- <th scope="col">Mã combo</th> -->
                             <th scope="col" class="tieude-bang">Tên danh mục combo</th>
                             <th scope="col" class="tieude-bang">Tóm tắt combo</th>
                             <th scope="col" class="tieude-bang">Quản lý</th>
@@ -67,7 +65,6 @@
                                             <tr>
                                                 <th scope="row" style="width: 5%;"><?php echo $i ?></th>
                                                 <td style="width: 20%;"><?php echo $result['ten_combo'] ?></td>
-                                                <!-- <td><?php echo $result['ma_combo'] ?></td> -->
                                                 <td style="width: 20%;"><?php echo $resultDMC['ten_danhmuc_combo'] ?></td>
                                                 <td style="width: 40%;"><?php echo $result['tomtat_combo'] ?></td>
                                                 <td style="width: 15%;">
@@ -92,7 +89,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 
 </html>

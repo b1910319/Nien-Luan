@@ -4,17 +4,12 @@
 ?>
 <?php
     $hinhAnh = new hinhAnh();
-//kiểm tra xem form gửi có phải bằng phương pháp POST không nếu phải thì lấy dữ liệu ra
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themhinhanh'])){
         $inset_hinhanh = $hinhAnh->insert_hinhanh($_POST, $_FILES);
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-</head>
-
 <body>
     <?php include("include/header.php") ?>
     <?php include ("include/rightBar.php") ?>
